@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Imagine you're onboarding a new team member to a complex project involving AWS Lambda, DynamoDB, S3, ECS, SQS, and CloudFormation. What's your primary focus during the initial onboarding process?",
+    "basedOn": "Software Development Engineer Intern - Amazon",
+    "selectedAnswer": "Focusing on the practical, hands-on coding aspects, letting them explore the services on their own."
+  },
+  {
+    "question": "During your research on Online Child Sexual Abuse (OCSA), you faced conflicting viewpoints within the team about the best approach to filter instances. How did you navigate this situation?",
+    "basedOn": "Junior Researcher - Somaiya Vidyavihar & CIFF",
+    "selectedAnswer": "Deferred to the senior researcher's expertise and implemented their preferred approach."
+  },
+  {
+    "question": "While developing the framework for automating LLM-assisted tuning for LSM-KVS, you discovered a more efficient but less conventional method.  Your supervisor initially prefers the established approach. How do you proceed?",
+    "basedOn": "Automating LLM-Assisted Tuning for LSM-KVS",
+    "selectedAnswer": "Implement the new method discreetly and present the improved results once it's proven successful."
+  },
+  {
+    "question": "You encountered unexpected performance bottlenecks while leveraging programmable network switches for LSM-KVS operations.  How do you approach debugging and resolving this issue?",
+    "basedOn": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
+    "selectedAnswer": "Focus on optimizing the P4 switch programming first, assuming the bottleneck lies within its logic."
+  },
+  {
+    "question": "Your team placed second in the SVB & ASU hackathon.  Reflecting back, what's one key improvement you would make to the project given more time?",
+    "basedOn": "Hackathon by SVB & ASU",
+    "selectedAnswer": "Implement more advanced features and functionalities to enhance the application's core offering."
+  }
+]

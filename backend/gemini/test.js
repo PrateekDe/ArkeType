@@ -34,7 +34,7 @@ export async function generateCustomQuestions(parsedExperience) {
   const axios = (await import('axios')).default;
 
   const prompt = `
-  Based on the following parsed resume experience and projects, create 3 customized behavioral/thinking questions.
+  Based on the following parsed resume experience and projects, create 5 customized behavioral/thinking questions.
   
   - Do not ask technical coding questions.
   - For each question, provide exactly 4 plausible multiple-choice options.
@@ -50,7 +50,8 @@ export async function generateCustomQuestions(parsedExperience) {
           "Option 1",
           "Option 2",
           "Option 3",
-          "Option 4"
+          "Option 4",
+          "Option 5"
         ]
       },
       { "question": "...", "basedOn": "Experience/Project Name", "options": [...] },

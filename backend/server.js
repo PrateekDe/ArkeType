@@ -6,7 +6,7 @@ import path from 'path';
 import { extractResumeExperience, generateCustomQuestions } from './gemini/test.js';
 import pkg from 'pdfjs-dist';  // ✅ EXACT like your working runParse.js
 
-import { analyzeBehaviorResponses } from './gemini/behaviorAnalysis.js';
+// import { analyzeBehaviorResponses } from './gemini/behaviorAnalysis.js';
 import { analyzeFullReport } from './gemini/finalAnalysisAgent.js';  // new file we'll create
 
 
@@ -111,7 +111,10 @@ app.post('/upload', upload.single('resume'), async (req, res) => {
   try {
     const filePath = req.file.path;
     const data = new Uint8Array(fs.readFileSync(filePath));
-    const loadingTask = getDocument({ data });
+    const loadingTask = getDocument({
+      data,
+      standardFontDataUrl: path.resolve('./node_modules/pdfjs-dist/standard_fonts/')
+    });
     const pdf = await loadingTask.promise;
 
     let resumeText = '';

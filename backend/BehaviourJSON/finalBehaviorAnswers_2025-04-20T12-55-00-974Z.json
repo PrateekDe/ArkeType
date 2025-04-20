@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "Software Development Engineer Intern - Amazon",
+    "question": "Imagine you're onboarding a new team member to a complex project involving AWS Lambda, DynamoDB, S3, ECS, SQS, and CloudFormation. What's your primary focus during the initial onboarding process?",
+    "answer": "Providing a high-level overview of the project's architecture and its components.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Junior Researcher - Somaiya Vidyavihar & CIFF",
+    "question": "During your research on Online Child Sexual Abuse (OCSA), you faced conflicting viewpoints within the team about the best approach to filter instances. How did you navigate this situation?",
+    "answer": "Deferred to the senior researcher's expertise and implemented their preferred approach.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Automating LLM-Assisted Tuning for LSM-KVS",
+    "question": "While developing the framework for automating LLM-assisted tuning for LSM-KVS, you discovered a more efficient but less conventional method.  Your supervisor initially prefers the established approach. How do you proceed?",
+    "answer": "Respectfully explain the advantages of the new method, supporting it with data and potential risks.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
+    "question": "You encountered unexpected performance bottlenecks while leveraging programmable network switches for LSM-KVS operations.  How do you approach debugging and resolving this issue?",
+    "answer": "Systematically isolate each component and conduct performance tests to pinpoint the bottleneck.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Hackathon by SVB & ASU",
+    "question": "Your team placed second in the SVB & ASU hackathon.  Reflecting back, what's one key improvement you would make to the project given more time?",
+    "answer": "Implement more advanced features and functionalities to enhance the application's core offering.",
+    "responseTime": 3
+  }
+]
