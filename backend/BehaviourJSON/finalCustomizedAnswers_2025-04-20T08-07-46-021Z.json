@@ -1,0 +1,17 @@
+[
+  {
+    "question": "During your time at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant flaw in your implementation right before a crucial presentation to stakeholders. How would you handle this situation?",
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "selectedAnswer": "Postpone the presentation to allow time for thorough debugging and correction."
+  },
+  {
+    "question": "Reflecting on your experience leading a team at ParmarthNGO during the COVID-19 crisis, what was your biggest learning about coordinating efforts under pressure?",
+    "basedOn": "ParmarthNGO",
+    "selectedAnswer": "The ability to adapt quickly to unforeseen circumstances and changes."
+  },
+  {
+    "question": "In developing Resumagic, you implemented usage throttling. Imagine a user circumvents the throttling mechanism, potentially impacting server resources. How would you address this issue?",
+    "basedOn": "Resumagic",
+    "selectedAnswer": "Introduce server-side checks and enforce throttling at the API level."
+  }
+]

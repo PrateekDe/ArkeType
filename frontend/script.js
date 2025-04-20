@@ -1,3 +1,14 @@
+// Check user type on load
+const userType = localStorage.getItem('userType');
+
+if (!userType) {
+  // No userType? Force back to login screen
+  window.location.href = 'login.html';
+} else {
+  console.log('User logged in as:', userType);
+}
+
+
 // Upload Page (index.html)
 if (document.getElementById('resumeInput')) {
   const fileInput = document.getElementById('resumeInput');
@@ -22,15 +33,17 @@ if (document.getElementById('resumeInput')) {
     try {
       uploadBtn.textContent = 'Uploading...';
 
+      window.location.href = 'loading.html';
+
       await fetch('/upload', {
         method: 'POST',
         body: formData
       });
 
-      window.location.href = 'loading.html';
+     
     } catch (err) {
       console.error('Upload failed:', err);
-      alert('Upload failed. Try again.');
+      // alert('Upload failed. Try again.');
       uploadBtn.textContent = 'Upload ➔';
     }
   });

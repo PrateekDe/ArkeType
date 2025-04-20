@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Parapersona</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container login-page">
+    <h1>Welcome to <span class="highlight">Parapersona</span></h1>
+    <p>Who are you?</p>
+    <div class="login-buttons">
+      <button id="candidateBtn" style="margin-right: 100px;" class="primary-button">Login as Candidate</button>
+      <button id="recruiterBtn" class="primary-button">Login as Recruiter</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('candidateBtn').addEventListener('click', () => {
+      localStorage.setItem('userType', 'candidate');
+      window.location.href = 'index.html';
+    });
+
+    document.getElementById('recruiterBtn').addEventListener('click', () => {
+      localStorage.setItem('userType', 'recruiter');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

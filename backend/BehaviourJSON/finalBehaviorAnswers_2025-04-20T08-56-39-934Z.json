@@ -1,0 +1,20 @@
+[
+  {
+    "basedOn": "Assistant System Engineer at Tata Consultancy Services",
+    "question": "You're working on a critical financial reporting feature at Tata Consultancy Services and the deadline is fast approaching.  A senior developer suggests a shortcut that could save time but might compromise the system's long-term scalability. How do you approach this situation?",
+    "answer": "Silently implement the more scalable solution, hoping the senior developer doesn't notice the difference.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "AI-Based Fitness Tracker Project",
+    "question": "While developing the AI-Based Fitness Tracker, you discover a more accurate pose estimation library than PoseNet.  However, integrating it would require significant code refactoring and potentially delay the project.  What is your next step?",
+    "answer": "Stick with PoseNet to avoid delays, reasoning that the current accuracy is sufficient.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Software Developer Intern at HCLTech",
+    "question": "During your internship at HCLTech, you encountered a complex bug in the ETL pipeline that caused data inconsistencies in the downstream analytics. How did you approach debugging and resolving this issue?",
+    "answer": "Try various solutions randomly until the issue seems resolved, then move on to other tasks.",
+    "responseTime": 2
+  }
+]
