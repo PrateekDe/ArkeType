@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Let's Get Real About Talent</h1>
+    <p>Upload your resume. We'll do the magic.</p>
+
+    <div class="upload-box" onclick="document.getElementById('resumeInput').click();">
+      <input type="file" id="resumeInput" accept=".pdf" hidden>
+      <div class="upload-text">⬆️ Drag & Drop or Click to Upload (PDF)</div>
+    </div>
+
+    <!-- 🆕 Uploaded filename -->
+    <p id="uploadStatus" class="upload-status"></p>
+
+    <button id="uploadBtn" class="primary-button" disabled>Upload ➔</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
