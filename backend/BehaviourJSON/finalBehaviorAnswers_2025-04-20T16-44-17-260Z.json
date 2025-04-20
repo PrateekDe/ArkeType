@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "Imagine you are working on the WheelEasy map again and a critical bug emerges during peak usage, preventing users from accessing accessibility information.  How do you prioritize your next steps?",
+    "answer": "Immediately revert to the previous stable version and then investigate the bug.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "During your time at PwC, you worked with a large dataset.  Reflecting on that experience, what was your most valuable learning regarding data preprocessing?",
+    "answer": "The value of using established preprocessing libraries to save time.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "In developing Resumagic, you used AWS Lambda.  Imagine the cost of Lambda functions unexpectedly skyrockets. What is your initial course of action?",
+    "answer": "Investigate CloudWatch logs and metrics to understand the cause of the increased cost.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "ParmarthNGO",
+    "question": "During your time leading ParmarthNGO, you had to make quick decisions under pressure. Can you describe a situation where your initial plan didn't work, and how you adapted?",
+    "answer": "Our initial supplier for oxygen cylinders backed out.  I immediately contacted backup suppliers and negotiated expedited delivery, even at a higher cost.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "Reflecting on the development of Findr by OpuLnt, what was the biggest challenge you encountered related to designing secure systems, and how did you overcome it?",
+    "answer": "Balancing security with user experience.  We streamlined the security measures to minimize friction for users while maintaining a high level of protection.",
+    "responseTime": 1
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Imagine you're working on the WheelEasy map again and a critical bug emerges that prevents users from zooming in on certain areas.  How do you approach this situation?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "Delegate the bug fix to another team member with more expertise in that specific area."
+  },
+  {
+    "question": "During your time at MindScribe, you focused on user privacy.  Let's say a new data storage technology emerges that promises enhanced security but requires significant code refactoring.  How would you evaluate whether to adopt this technology?",
+    "basedOn": "MindScribe",
+    "selectedAnswer": "Thoroughly research the technology, assess its benefits and drawbacks, and present a proposal to the team outlining the potential impact on the project."
+  },
+  {
+    "question": "Reflecting on your PwC internship, imagine you discover a significant error in the dataset after already training your ensemble forecasting system. How would you proceed?",
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "selectedAnswer": "Correct the dataset and retrain the model, documenting the changes and their impact."
+  },
+  {
+    "question": "While developing Findr, you and your team disagreed on the best approach for implementing the direct messaging feature. How would you handle this conflict?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Advocate strongly for your preferred approach and try to persuade the team to adopt it."
+  },
+  {
+    "question": "During the Hacks for Humanity hackathon, you led the backend development.  If a critical dependency unexpectedly stopped working a few hours before the deadline, what would be your first step?",
+    "basedOn": "Hacks for Humanity",
+    "selectedAnswer": "Simplify the project to eliminate the reliance on the broken dependency."
+  }
+]

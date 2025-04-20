@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,7 @@
   </div>
 
   <div class="container" id="finalResultContainer">
-    <!-- <h1>🎯 Candidate Final Assessment Report</h1> -->
+
 
     <section id="experienceSection">
       <h2>🧠 Experience & Projects</h2>
@@ -38,5 +38,151 @@
   </div>
 
   <script src="script.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Final Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .star {
+      filter: blur(0.6px);
+    }
+  </style>
+</head>
+<body class="m-0 p-0 bg-gradient-to-b from-[#4B3B9B] via-[#5B4BA8] to-[#7B63C6] min-h-screen overflow-y-scroll text-white font-serif">
+
+  <!-- Star Background -->
+  <div class="absolute inset-0 z-0">
+    <div class="w-full h-full relative">
+      <!-- Stars -->
+      <span class="absolute star bg-white rounded-full opacity-50" style="width:4px; height:4px; top:7%; left:12%;"></span>
+      <span class="absolute star bg-white rounded-full opacity-40" style="width:3px; height:3px; top:18%; left:78%;"></span>
+      <span class="absolute star bg-white rounded-full opacity-60" style="width:2px; height:2px; top:25%; left:33%;"></span>
+      <span class="absolute star bg-white rounded-full opacity-50" style="width:3px; height:3px; top:40%; left:55%;"></span>
+      <span class="absolute star bg-white rounded-full opacity-40" style="width:4px; height:4px; top:53%; left:20%;"></span>
+      <span class="absolute star bg-white rounded-full opacity-50" style="width:2px; height:2px; top:60%; left:85%;"></span>
+      <span class="absolute star bg-white rounded-full opacity-60" style="width:3px; height:3px; top:68%; left:42%;"></span>
+      <span class="absolute star bg-white rounded-full opacity-40" style="width:4px; height:4px; top:75%; left:10%;"></span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 flex flex-col md:flex-row justify-center items-start gap-10 p-10">
+    
+    <!-- Left side -->
+    <div class="flex flex-col items-start w-full md:w-1/2">
+      <h1 class="text-5xl font-extrabold leading-tight mb-10">YOUR<br>FINAL<br>REPORT</h1>
+
+      <div class="text-3xl font-semibold mt-6">DESIRABILITY SCORE</div>
+      <div id="desirabilityScore" class="text-red-500 text-6xl font-bold mt-2">--</div>
+
+      <h2 class="text-3xl font-semibold mt-12 mb-4">Strengths to improve</h2>
+      <ul class="list-disc ml-8 text-xl space-y-2">
+        <li>Decision speed</li>
+        <li>Growth</li>
+        <li>Teamwork</li>
+      </ul>
+    </div>
+
+    <!-- Right side -->
+    <div class="bg-[#c5a6f0] text-black rounded-2xl p-6 w-full md:w-1/2 shadow-2xl space-y-6" id="finalResultContainer">
+      <h2 id="candidateName" class="text-5xl font-bold">Candidate Name</h2>
+
+      <p class="text-2xl"><strong>Experience:</strong> <span id="experienceValue">-</span></p>
+      <p class="text-2xl"><strong>Projects:</strong> <span id="projectsValue">-</span></p>
+
+      <div class="bg-[#b695e6] rounded-lg p-4 text-xl">
+        <h3 class="text-2xl font-semibold mb-2">Emotional Assessment</h3>
+        <div class="flex flex-wrap gap-4">
+          <p><strong>Loyalty:</strong> <span id="loyaltyValue">-</span></p>
+          <p><strong>Growth:</strong> <span id="growthValue">-</span></p>
+          <p><strong>Emotional IQ:</strong> <span id="emotionalIQValue">-</span></p>
+          <p><strong>Results:</strong> <span id="resultsValue">-</span></p>
+        </div>
+      </div>
+
+      <div class="bg-[#b695e6] rounded-lg p-4 text-xl text-center">
+        <p>Average time taken to respond:</p>
+        <p id="avgTime" class="text-3xl font-bold mt-2">-- Seconds</p>
+      </div>
+
+      <div class="bg-[#b695e6] rounded-lg p-4 text-xl">
+        <p class="font-bold">Analysis:</p>
+        <p id="analysisValue">-</p>
+      </div>
+
+      <div class="bg-[#b695e6] rounded-lg p-4 text-xl">
+        <p class="font-bold">Recruiter is looking for:</p>
+        <p id="recruiterLooking">-</p>
+      </div>
+    </div>
+
+<br>
+
+    <!-- RAG AI Chat + Visual Insights -->
+<div class="relative z-10 container mx-auto px-6 py-10 flex flex-col md:flex-row gap-10">
+  
+  <div class="w-full md:w-2/3 bg-[#f6ebff] rounded-3xl shadow-xl p-8 flex flex-col h-[600px]">
+    <h2 class="text-3xl font-bold text-center mb-4 text-[#4B3B9B]">Ask the AI</h2>
+    <div id="chatWindow" class="flex-1 overflow-y-auto bg-white rounded-lg p-4 mb-4 shadow-inner space-y-4 text-black text-sm">
+      <!-- Chat messages appear here -->
+    </div>
+    <div class="flex gap-2">
+      <input type="text" id="userQuestion" class="flex-1 px-4 py-2 rounded-full bg-white text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a18cd1] placeholder-gray-400" placeholder="Type your message..." />
+      <button onclick="askRAG()" class="px-4 py-2 rounded-full bg-[#6a0dad] hover:bg-[#580e9b] text-white font-semibold transition">Send</button>
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/3 bg-[#e6d8f7] rounded-3xl shadow-xl p-6 flex flex-col justify-between">
+    <h2 class="text-2xl font-bold text-center mb-4 text-[#4B3B9B]">Visual Insights</h2>
+    <div class="h-1/2 mb-8">
+      <canvas id="barChart" class="w-full h-full"></canvas>
+    </div>
+    <div class="h-1/2">
+      <canvas id="pieChart" class="w-full h-full"></canvas>
+    </div>
+  </div>
+
+
+  </div>
+
+  <!-- Spinner initially -->
+  <div id="loader" class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#4B3B9B] z-50">
+    <div class="spinner border-t-4 border-b-4 border-white rounded-full w-12 h-12 animate-spin"></div>
+    <p class="ml-4 text-white text-2xl">Loading your awesome report...</p>
+  </div>
+
+  <script src="script.js"></script>
+
+
+  <script>
+    async function askRAG() {
+      const question = document.getElementById('userQuestion').value.trim();
+      const chatWindow = document.getElementById('chatWindow');
+    
+      if (!question) return;
+    
+      const userMsg = document.createElement('div');
+      userMsg.className = 'text-right';
+      userMsg.innerHTML = `<div class="inline-block bg-[#d1c4e9] text-black px-4 py-2 rounded-2xl max-w-[75%]">${question}</div>`;
+      chatWindow.appendChild(userMsg);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    
+      document.getElementById('userQuestion').value = '';
+    
+      setTimeout(() => {
+        const aiMsg = document.createElement('div');
+        aiMsg.className = 'text-left';
+        aiMsg.innerHTML = `<div class="inline-block bg-[#e0d7f8] text-black px-4 py-2 rounded-2xl max-w-[75%]">This is a placeholder response. (Connect backend)</div>`;
+        chatWindow.appendChild(aiMsg);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }, 1000);
+    }
+    </script>
 </body>
 </html>

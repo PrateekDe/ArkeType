@@ -3,6 +3,7 @@ import multer from 'multer';
 import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
+import { spawn } from 'child_process';  // ✅ ADD THIS
 import { extractResumeExperience, generateCustomQuestions } from './gemini/test.js';
 import pkg from 'pdfjs-dist';  // ✅ EXACT like your working runParse.js
 
@@ -110,6 +111,27 @@ const upload = multer({ dest: 'backend/BehaviourJSON/' });
 app.post('/upload', upload.single('resume'), async (req, res) => {
   try {
     const filePath = req.file.path;
+
+    const savedPath = path.join('backend/outputs', 'uploadedResume.pdf');
+fs.copyFileSync(filePath, savedPath); // ✅ Save it permanently
+
+console.log('✅ Resume uploaded and saved.');
+
+  // ✅ Call your bot.py immediately after upload!
+  const pythonProcess = spawn('python', ['backend/rag_resume_bot.py', savedPath]);
+
+  pythonProcess.stdout.on('data', (data) => {
+    console.log(`[Python Output]: ${data.toString()}`);
+  });
+
+  pythonProcess.stderr.on('data', (data) => {
+    console.error(`[Python Error]: ${data.toString()}`);
+  });
+
+  pythonProcess.on('close', (code) => {
+    console.log(`[Python Process exited with code ${code}]`);
+  });
+
     const data = new Uint8Array(fs.readFileSync(filePath));
     const loadingTask = getDocument({
       data,

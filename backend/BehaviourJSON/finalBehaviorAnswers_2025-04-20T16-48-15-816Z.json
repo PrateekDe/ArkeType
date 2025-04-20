@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "Imagine you are working on the WheelEasy map again and a critical bug emerges during peak usage, preventing users from accessing accessibility information.  How do you prioritize your next steps?",
+    "answer": "Begin working on a hotfix while simultaneously investigating the root cause and communicating with affected users.",
+    "responseTime": 4
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "During your time at PwC, you worked with a large dataset.  Reflecting on that experience, what was your most valuable learning regarding data preprocessing?",
+    "answer": "The need for meticulous documentation of each preprocessing step.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "In developing Resumagic, you used AWS Lambda.  Imagine the cost of Lambda functions unexpectedly skyrockets. What is your initial course of action?",
+    "answer": "Switch to a different serverless platform to potentially lower costs.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "ParmarthNGO",
+    "question": "During your time leading ParmarthNGO, you had to make quick decisions under pressure. Can you describe a situation where your initial plan didn't work, and how you adapted?",
+    "answer": "We faced transportation challenges due to lockdown restrictions.  I re-organized our logistics, leveraging local volunteers with permits for essential services.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "Reflecting on the development of Findr by OpuLnt, what was the biggest challenge you encountered related to designing secure systems, and how did you overcome it?",
+    "answer": "Securing the backend against unauthorized access. We implemented robust authentication and authorization mechanisms, including multi-factor authentication.",
+    "responseTime": 1
+  }
+]

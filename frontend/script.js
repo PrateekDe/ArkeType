@@ -170,6 +170,7 @@ if (document.getElementById('resultContainer2')) {
     });
 }
 
+
 // Final Result Page (result.html)
 if (document.getElementById('finalResultContainer')) {
   const loader = document.getElementById('loader');
@@ -183,98 +184,81 @@ if (document.getElementById('finalResultContainer')) {
         return;
       }
 
-      const experienceDiv = document.getElementById('experienceList');
-      if (data.parsedExperience.Experience) {
-        data.parsedExperience.Experience.forEach(exp => {
-          experienceDiv.innerHTML += `
-            <div class="card">
-              <h3>${exp.Role} @ ${exp.Company}</h3>
-              <p><strong>Location:</strong> ${exp.Location}</p>
-              <p><strong>Dates:</strong> ${exp.Dates}</p>
-              <ul>${exp.Responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
-            </div>`;
-        });
-      }
-
-      if (data.parsedExperience.Projects) {
-        data.parsedExperience.Projects.forEach(proj => {
-          experienceDiv.innerHTML += `
-            <div class="card">
-              <h3>Project: ${proj.Name || proj.Role}</h3>
-              <p><strong>Description:</strong> ${proj.Description || 'No description'}</p>
-              <p><strong>Date:</strong> ${proj.Date || 'N/A'}</p>
-              <ul>${(proj.Details || []).map(d => `<li>${d}</li>`).join('')}</ul>
-            </div>`;
-        });
-      }
-
-      const customizedDiv = document.getElementById('customizedList');
-      if (data.customizedAnswers) {
-        data.customizedAnswers.forEach(ans => {
-          customizedDiv.innerHTML += `
-            <div class="card">
-              <p><strong>Question:</strong> ${ans.question}</p>
-              <p><strong>Selected Answer:</strong> ${ans.selectedAnswer}</p>
-            </div>`;
-        });
-      }
-
-      const behaviorDiv = document.getElementById('behaviorList');
-      if (data.behavioralAnswers) {
-        data.behavioralAnswers.forEach(behavior => {
-          behaviorDiv.innerHTML += `
-            <div class="card">
-              <p><strong>Question:</strong> ${behavior.question}</p>
-              <p><strong>Selected Answer:</strong> ${behavior.answer}</p>
-              <p><em>Time taken:</em> ${behavior.responseTime} seconds</p>
-            </div>`;
-        });
-      }
-
-      if (userType === "recruiter") {
-        generateFinalSummaryFromAI();
-      }
-
-      loader.style.display = 'none';
-      finalContainer.style.display = 'block';
+      // ✅ After initial /report load, call /final-report (executive summary)
+      generateFinalSummaryFromAI();
     })
     .catch(err => {
-      console.error('Error loading final report:', err);
+      console.error('Error loading report:', err);
       loader.innerHTML = '<p>Failed to load report. Try again later.</p>';
     });
 }
 
-// Function to fetch AI Analyzed Executive Summary
+// ✅ Proper function to fetch AI Analyzed Summary
 function generateFinalSummaryFromAI() {
   const summaryLoader = document.getElementById('summaryLoader');
 
   fetch('/final-report')
     .then(res => res.json())
     .then(analysis => {
-      const container = document.getElementById('finalResultContainer');
+      if (!analysis) {
+        console.error('No AI analysis found.');
+        return;
+      }
 
-      if (summaryLoader) summaryLoader.remove();
+      // Fill the Final Report Data
+      document.getElementById('candidateName').textContent = analysis.name || 'Candidate Name';
+      document.getElementById('experienceValue').textContent = analysis.experience || 'N/A';
+      document.getElementById('projectsValue').textContent = analysis.projects || 'N/A';
+      document.getElementById('loyaltyValue').textContent = `${analysis.loyaltyPercent}%`;
+      document.getElementById('growthValue').textContent = `${analysis.companyGrowthPercent}%`;
+      document.getElementById('emotionalIQValue').textContent = `${analysis.emotionalIQPercent}%`;
+      document.getElementById('resultsValue').textContent = `${analysis.resultsFocusPercent}%`;
+      document.getElementById('avgTime').textContent = `${analysis.averageResponseTime} Seconds`;
+      document.getElementById('analysisValue').textContent = analysis.overallAnalysis || '-';
+      document.getElementById('recruiterLooking').textContent = analysis.recruiterLooking || 'N/A';
+      document.getElementById('desirabilityScore').textContent = analysis.desirabilityScore || '--';
 
-      container.innerHTML += `
-        <section class="summary-card">
-          <h2>📋 Executive Summary (AI analyzed)</h2>
-          <div class="card">
-            <h3>Emotional Assessment</h3>
-            <p>Loyalty: ${analysis.loyaltyPercent}%</p>
-            <p>Emotional IQ: ${analysis.emotionalIQPercent}%</p>
-            <p>Company Growth Potential: ${analysis.companyGrowthPercent}%</p>
-            <p>Results Focus: ${analysis.resultsFocusPercent}%</p>
-            <h3>Behavioral Response</h3>
-            <p>Average Response Time: ${analysis.averageResponseTime} seconds</p>
-            <p>Instinctiveness: ${analysis.instinctivenessScore}</p>
-            <h3>Final Verdict</h3>
-            <p>${analysis.overallAnalysis}</p>
-            <h2 style="color: black;">Desirability Score: ${analysis.desirabilityScore}%</h2>
-          </div>
-        </section>
-      `;
+      // Hide Loader and Show Content
+      loader.style.display = 'none';
+      document.querySelector('.z-10').style.display = 'flex';
     })
     .catch(err => {
       console.error('Error loading final AI report:', err);
+      loader.innerHTML = '<p>Failed to load analysis. Try again later.</p>';
     });
 }
+
+
+
+// Function to fetch AI Analyzed Executive Summary
+function generateFinalSummaryFromAI() {
+  const summaryLoader = document.getElementById('loader');
+
+  fetch('/final-report')
+    .then(res => res.json())
+    .then(analysis => {
+      console.log("hiiii");
+      if (summaryLoader) summaryLoader.remove();
+
+      // ✅ Update individual IDs with analysis data
+      document.getElementById('candidateName').textContent = analysis.name || 'Candidate Name';
+      document.getElementById('experienceValue').textContent = analysis.experience || 'N/A';
+      document.getElementById('projectsValue').textContent = analysis.projects || 'N/A';
+      document.getElementById('loyaltyValue').textContent = `${analysis.loyaltyPercent}%`;
+      document.getElementById('growthValue').textContent = `${analysis.companyGrowthPercent}%`;
+      document.getElementById('emotionalIQValue').textContent = `${analysis.emotionalIQPercent}%`;
+      document.getElementById('resultsValue').textContent = `${analysis.resultsFocusPercent}%`;
+      document.getElementById('avgTime').textContent = `${analysis.averageResponseTime} Seconds`;
+      document.getElementById('analysisValue').textContent = analysis.overallAnalysis || '-';
+      document.getElementById('recruiterLooking').textContent = analysis.recruiterLooking || 'Emotional';
+      document.getElementById('desirabilityScore').textContent = analysis.desirabilityScore || '--';
+
+      // ✅ Make report visible
+      document.querySelector('.z-10').style.display = 'flex';
+    })
+    .catch(err => {
+      console.error('Error loading final AI report:', err);
+      summaryLoader.innerHTML = '<p>Failed to load AI analysis.</p>';
+    });
+}
+

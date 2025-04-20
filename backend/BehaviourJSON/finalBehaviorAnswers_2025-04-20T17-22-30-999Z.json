@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "Imagine you're working on the WheelEasy map again and a critical bug emerges that prevents users from zooming in on certain areas.  How do you approach this situation?",
+    "answer": "Quickly develop a temporary workaround to minimize user impact while investigating the root cause.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "MindScribe",
+    "question": "During your time at MindScribe, you focused on user privacy.  Let's say a new data storage technology emerges that promises enhanced security but requires significant code refactoring.  How would you evaluate whether to adopt this technology?",
+    "answer": "Thoroughly research the technology, assess its benefits and drawbacks, and present a proposal to the team outlining the potential impact on the project.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "Reflecting on your PwC internship, imagine you discover a significant error in the dataset after already training your ensemble forecasting system. How would you proceed?",
+    "answer": "Correct the dataset and retrain the model, documenting the changes and their impact.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "While developing Findr, you and your team disagreed on the best approach for implementing the direct messaging feature. How would you handle this conflict?",
+    "answer": "Facilitate a discussion to understand each team member's perspective and find a compromise solution.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Hacks for Humanity",
+    "question": "During the Hacks for Humanity hackathon, you led the backend development.  If a critical dependency unexpectedly stopped working a few hours before the deadline, what would be your first step?",
+    "answer": "Try to fix the dependency yourself, even if it means working late into the night.",
+    "responseTime": 2
+  }
+]
