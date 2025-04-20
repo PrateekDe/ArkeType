@@ -174,13 +174,15 @@ if (document.getElementById('resultContainer2')) {
 
 
 
-// Result (final report) Page
 if (document.getElementById('finalResultContainer')) {
+  const loader = document.getElementById('loader');
+  const finalContainer = document.getElementById('finalResultContainer');
+
   fetch('/report')
     .then(res => res.json())
     .then(data => {
       if (!data.parsedExperience) {
-        document.getElementById('finalResultContainer').innerHTML = '<p>Report not available.</p>';
+        loader.innerHTML = '<p>Report not available.</p>';
         return;
       }
 
@@ -211,7 +213,7 @@ if (document.getElementById('finalResultContainer')) {
         });
       }
 
-      // 🛠 Customized Questions Answers (directly from report)
+      // 🛠 Customized Questions Answers
       const customizedDiv = document.getElementById('customizedList');
       if (data.customizedAnswers) {
         data.customizedAnswers.forEach(ans => {
@@ -222,8 +224,6 @@ if (document.getElementById('finalResultContainer')) {
             </div>
           `;
         });
-      } else {
-        customizedDiv.innerHTML = '<p>No customized answers found.</p>';
       }
 
       // 💬 Behavioral Answers
@@ -239,11 +239,56 @@ if (document.getElementById('finalResultContainer')) {
           `;
         });
       }
+
+      // ✅ After normal report loaded, generate Executive Summary
+      generateFinalSummaryFromAI();
+
+      // ✅ Hide Loader and show the actual Report
+      loader.style.display = 'none';
+      finalContainer.style.display = 'block';
     })
     .catch(err => {
       console.error('Error loading final report:', err);
+      loader.innerHTML = '<p>Failed to load report. Try again later.</p>';
     });
 }
+
+// 🧠 Function to fetch AI analyzed executive summary
+function generateFinalSummaryFromAI() {
+  fetch('/final-report')
+    .then(res => res.json())
+    .then(analysis => {
+      const container = document.getElementById('finalResultContainer');
+
+      container.innerHTML += `
+        <section class="summary-card">
+          <h2>📋 Executive Summary (AI analyzed)</h2>
+
+          <div class="card">
+            <h3>Emotional Assessment</h3>
+            <p>Loyalty: ${analysis.loyaltyPercent}%</p>
+            <p>Emotional IQ: ${analysis.emotionalIQPercent}%</p>
+            <p>Company Growth Potential: ${analysis.companyGrowthPercent}%</p>
+            <p>Results Focus: ${analysis.resultsFocusPercent}%</p>
+
+            <h3>Behavioral Response</h3>
+            <p>Average Response Time: ${analysis.averageResponseTime} seconds</p>
+            <p>Instinctiveness: ${analysis.instinctivenessScore}</p>
+
+            <h3>Final Verdict</h3>
+            <p>${analysis.overallAnalysis}</p>
+
+            <h2 style="color: red;">Desirability Score: ${analysis.desirabilityScore}%</h2>
+          </div>
+        </section>
+      `;
+    })
+    .catch(err => {
+      console.error('Error loading final AI report:', err);
+    });
+}
+
+
 
 // 🆕 Helper: Fetch latest customized answers
 async function fetchLatestCustomized() {

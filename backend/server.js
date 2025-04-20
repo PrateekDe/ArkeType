@@ -7,6 +7,10 @@ import { extractResumeExperience, generateCustomQuestions } from './gemini/test.
 import pkg from 'pdfjs-dist';  // ✅ EXACT like your working runParse.js
 
 import { analyzeBehaviorResponses } from './gemini/behaviorAnalysis.js';
+import { analyzeFullReport } from './gemini/finalAnalysisAgent.js';  // new file we'll create
+
+
+
 
 const { getDocument } = pkg;
 
@@ -18,6 +22,24 @@ app.use(cors());
 app.use(express.static('frontend'));
 app.use('/uploads', express.static('uploads'));
 app.use('/outputs', express.static('outputs'));
+
+
+app.get('/final-report', async (req, res) => {
+  try {
+    const reportPath = 'backend/outputs/finalReport.json';
+    if (!fs.existsSync(reportPath)) {
+      return res.status(404).json({ success: false, message: 'Report not found' });
+    }
+    const reportData = JSON.parse(fs.readFileSync(reportPath));
+
+    const analysis = await analyzeFullReport(reportData);
+
+    res.json(analysis);
+  } catch (err) {
+    console.error('Final Report Error:', err.message);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
 
 
 app.post('/save-customized-json', (req, res) => {
