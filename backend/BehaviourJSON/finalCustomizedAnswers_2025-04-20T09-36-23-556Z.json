@@ -1,0 +1,17 @@
+[
+  {
+    "question": "During your internship at PwC, you worked with a large dataset. Imagine you discovered a significant error in the data after completing a substantial portion of the analysis. How would you proceed?",
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "selectedAnswer": "Discreetly attempt to correct the error without alerting anyone, prioritizing project completion. If successful, briefly mention the correction during the final presentation."
+  },
+  {
+    "question": "While leading the ParmarthNGO initiative, you faced the challenge of coordinating efforts with contractors during a crisis.  If a crucial supplier failed to deliver oxygen cylinders on time, how would you have handled the situation?",
+    "basedOn": "ParmarthNGO - City Lead",
+    "selectedAnswer": "Escalate the issue to higher authorities and request their intervention to expedite the delivery from the original supplier."
+  },
+  {
+    "question": "Reflecting on your work on Resumagic, you chose to use AWS Lambda for secure API interactions. Imagine a different team member strongly advocated for using a different serverless platform.  How would you approach this disagreement?",
+    "basedOn": "Resumagic - AI-Powered Web Tool",
+    "selectedAnswer": "Explain the rationale behind your initial choice, highlighting the specific benefits of AWS Lambda in the context of the project, and remain open to alternative solutions if presented with sufficient evidence."
+  }
+]

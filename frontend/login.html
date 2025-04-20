@@ -16,14 +16,31 @@
   </div>
 
   <script>
+    // Candidate login
     document.getElementById('candidateBtn').addEventListener('click', () => {
-      localStorage.setItem('userType', 'candidate');
+      sessionStorage.setItem('userType', 'candidate');
       window.location.href = 'index.html';
     });
 
-    document.getElementById('recruiterBtn').addEventListener('click', () => {
-      localStorage.setItem('userType', 'recruiter');
-      window.location.href = 'index.html';
+    // Recruiter login
+    document.getElementById('recruiterBtn').addEventListener('click', async () => {
+      sessionStorage.setItem('userType', 'recruiter');
+
+      try {
+        // Try fetching finalReport.json
+        const response = await fetch('/report');
+
+        if (response.ok) {
+          // ✅ File exists, proceed
+          window.location.href = 'result.html';
+        } else {
+          // ❌ File not found
+          alert('There is no report from any candidate. Please upload a resume first as a candidate.');
+        }
+      } catch (error) {
+        console.error('Error checking report:', error);
+        alert('Server error. Try again later.');
+      }
     });
   </script>
 </body>

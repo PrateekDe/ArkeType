@@ -1,0 +1,20 @@
+[
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "question": "During your internship at PwC, you improved the LightGBM algorithm's ability to capture seasonal trends. Imagine you're facing a similar challenge in a new project, but the data exhibits highly irregular and unpredictable fluctuations. How would you approach this situation?",
+    "answer": "Combine LightGBM with a time series decomposition technique to separate the trend, seasonality, and residuals, then model each component separately.",
+    "responseTime": 3
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "In your project 'Findr by OpuLnt', you aimed to create a user-friendly platform with minimal registration requirements.  Let's say a stakeholder insists on adding multi-factor authentication for enhanced security, despite potential user friction. How would you navigate this situation?",
+    "answer": "Suggest alternative security measures like IP address monitoring or device fingerprinting that might offer a balance between security and usability.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "ParmarthNGO - City Lead",
+    "question": "Reflecting on your experience leading a team at ParmarthNGO during the COVID-19 crisis, imagine a similar emergency arises where critical resources are dwindling rapidly.  However, conflicting information emerges about the most effective allocation strategy. How would you make a decision under such pressure?",
+    "answer": "Quickly consult with trusted experts and advisors to gather their insights and recommendations before making a decision.",
+    "responseTime": 2
+  }
+]

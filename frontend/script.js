@@ -1,5 +1,5 @@
 // Check user type on load
-const userType = localStorage.getItem('userType');
+const userType = sessionStorage.getItem('userType');
 
 if (!userType) {
   // No userType? Force back to login screen
@@ -31,14 +31,20 @@ if (document.getElementById('resumeInput')) {
     formData.append('resume', file);
 
     try {
-      uploadBtn.textContent = 'Uploading...';
+      uploadBtn.disabled = true;
+      uploadBtn.innerHTML = `
+        <div class="spinner"></div>
+      `;
+      
 
-      window.location.href = 'loading.html';
+  
 
       await fetch('/upload', {
         method: 'POST',
         body: formData
       });
+
+      window.location.href = 'loading.html';
 
      
     } catch (err) {
@@ -191,6 +197,7 @@ if (document.getElementById('finalResultContainer')) {
   const loader = document.getElementById('loader');
   const finalContainer = document.getElementById('finalResultContainer');
 
+
   fetch('/report')
     .then(res => res.json())
     .then(data => {
@@ -254,6 +261,7 @@ if (document.getElementById('finalResultContainer')) {
       }
 
       // ✅ After normal report loaded, generate Executive Summary
+      if(userType==="recruiter")
       generateFinalSummaryFromAI();
 
       // ✅ Hide Loader and show the actual Report
@@ -268,10 +276,19 @@ if (document.getElementById('finalResultContainer')) {
 
 // 🧠 Function to fetch AI analyzed executive summary
 function generateFinalSummaryFromAI() {
+
+  const summaryLoader = document.getElementById('summaryLoader'); // 🆕
+
+
   fetch('/final-report')
     .then(res => res.json())
     .then(analysis => {
       const container = document.getElementById('finalResultContainer');
+
+          // 🆕 Remove the loader when AI summary is ready
+          if (summaryLoader) {
+            summaryLoader.remove();
+          }
 
       container.innerHTML += `
         <section class="summary-card">

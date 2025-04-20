@@ -1,0 +1,17 @@
+[
+  {
+    "question": "During your internship at PwC, you improved the LightGBM algorithm's ability to capture seasonal trends. Imagine you're facing a similar challenge in a new project, but the data exhibits highly irregular and unpredictable fluctuations. How would you approach this situation?",
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "selectedAnswer": "No answer"
+  },
+  {
+    "question": "In your project 'Findr by OpuLnt', you aimed to create a user-friendly platform with minimal registration requirements.  Let's say a stakeholder insists on adding multi-factor authentication for enhanced security, despite potential user friction. How would you navigate this situation?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "No answer"
+  },
+  {
+    "question": "Reflecting on your experience leading a team at ParmarthNGO during the COVID-19 crisis, imagine a similar emergency arises where critical resources are dwindling rapidly.  However, conflicting information emerges about the most effective allocation strategy. How would you make a decision under such pressure?",
+    "basedOn": "ParmarthNGO - City Lead",
+    "selectedAnswer": "No answer"
+  }
+]
