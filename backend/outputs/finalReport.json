@@ -47,7 +47,7 @@
       {
         "Company": "AdpT LLC",
         "Role": "Front End Developer",
-        "Location": "Tempe, Az",
+        "Location": "Tempe, AZ",
         "Dates": "Dec 2023 – Feb 2024",
         "Responsibilities": [
           "Planned and designed an intuitive interface using vanilla JavaScript",
@@ -60,7 +60,7 @@
         "Location": "Bengaluru, IN",
         "Dates": "May 2021 – Aug 2021",
         "Responsibilities": [
-          "Led a team of 200 in a startup initiative involving 1000 people during the second wave of COVID-19 in India",
+          "Led a team of 200 in a startup initiative",
           "Coordinated efforts with contractors to secure oxygen cylinders and essential supplies"
         ]
       }
@@ -102,7 +102,7 @@
         "Details": [
           "Developed an iOS app that allows users to search for events",
           "Integrated with Ticketmaster Discovery API to fetch event data",
-          "Utilized CoreLocation to display event locations"
+          "Utilized CoreLocation to display event locations on the map view"
         ]
       },
       {
@@ -120,7 +120,8 @@
         "Date": "Oct 2023",
         "Details": [
           "Led the implementation of a website feature featuring an OTP password generator login system",
-          "Orchestrated the complete back-end development for the full-stack project"
+          "Orchestrated the complete back-end development for the full-stack project",
+          "Played a key role in constructing specific sections of the database"
         ]
       }
     ],
@@ -129,68 +130,34 @@
   "customizedQuestions": {
     "questions": [
       {
-        "question": "During your time at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant improvement in model performance during testing, but it relied on a complex and difficult-to-explain technique.  How would you approach presenting this to your team and stakeholders?",
-        "basedOn": "PricewaterhouseCoopers (PwC)",
+        "question": "During your internship at PwC, you enhanced the LightGBM algorithm. Imagine you discovered that your improved algorithm unexpectedly underperformed on a specific subset of the data. How would you approach this issue?",
+        "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
         "options": [
-          "Present the improvement and the complex technique as is, emphasizing the performance gains and offering to deep-dive into the technical details upon request.",
-          "Simplify the explanation of the technique, potentially omitting some details, to make it more accessible to a broader audience, focusing on the positive results.",
-          "Hold off on presenting the findings until you can develop a simpler, more easily understandable approach that achieves similar performance gains.",
-          "Present the improvement and acknowledge the complexity of the technique, recommending further investigation and collaboration to validate and simplify it."
+          "Immediately revert to the original algorithm and report the issue to the supervisor.",
+          "Isolate the problematic subset and conduct further analysis to understand the underlying reasons for underperformance.",
+          "Try different hyperparameter tuning strategies without investigating the specific data subset.",
+          "Consult online forums and communities to find similar cases and apply the suggested solutions directly."
         ]
       },
       {
-        "question": "While working on Resumagic, you integrated AWS Lambda for secure Gemini API interactions.  If you faced unexpected latency issues with Lambda affecting the user experience, what steps would you take to diagnose and resolve the problem?",
-        "basedOn": "Resumagic",
+        "question": "While leading the development of Findr by OpuLnt, how did you ensure that the team stayed aligned with the project's goals and deadlines?",
+        "basedOn": "Findr by OpuLnt - Full Stack Developer",
         "options": [
-          "Immediately roll back the Lambda integration to a previous stable version and investigate the issue offline.",
-          "Implement detailed logging and monitoring within the Lambda function to pinpoint the source of the latency.",
-          "Consult AWS documentation and online forums for similar reported issues and try suggested solutions.",
-          "Reach out to AWS support for immediate assistance while simultaneously investigating the issue internally."
+          "Held daily stand-up meetings to track progress, discuss roadblocks, and maintain focus.",
+          "Primarily relied on individual team members to manage their own work and meet deadlines independently.",
+          "Created a detailed project plan at the beginning and strictly adhered to it without any adjustments throughout the project lifecycle.",
+          "Communicated project updates and deadlines only at the end of each week to avoid overwhelming the team with frequent communication."
         ]
       },
       {
-        "question": "Reflecting on your experience leading a team at ParmarthNGO during the COVID-19 crisis, describe a time you had to make a critical decision with limited information and resources. What was the situation, and how did you approach making that decision?",
-        "basedOn": "ParmarthNGO",
+        "question": "Reflecting on your experience building Resumagic, you integrated AWS Lambda for secure Gemini API interactions.  If you were to encounter unexpected latency issues with the Lambda function impacting user experience, what would be your initial steps to diagnose and address the problem?",
+        "basedOn": "Resumagic - AI-Powered Web Tool",
         "options": [
-          "Gather all available information quickly, even if incomplete, consult with the team on potential solutions, and choose the option with the highest potential benefit, accepting the inherent risks.",
-          "Prioritize the most urgent needs, focusing on immediate impact and delegating tasks to team members with relevant expertise, adjusting the plan as more information becomes available.",
-          "Seek guidance from experienced individuals outside the immediate team who might have encountered similar challenges, leveraging their knowledge to inform the decision-making process.",
-          "Focus on maintaining open communication and transparency with the team and stakeholders about the limited resources and evolving situation, making collaborative decisions based on the best available data."
+          "Immediately increase the memory allocated to the Lambda function, assuming resource limitations are the cause.",
+          "Check AWS CloudWatch logs and metrics to identify potential bottlenecks and error messages related to the Lambda function.",
+          "Assume the issue lies with the Gemini API and contact their support team without investigating the Lambda function itself.",
+          "Revert to a previous version of the Lambda function code, assuming recent changes introduced the latency problem."
         ]
-      }
-    ]
-  },
-  "behavioralAnalysis": {
-    "analysis": [
-      {
-        "category": "Technical Communication & Simplification",
-        "tags": [
-          "Results-Oriented",
-          "Communication",
-          "Pragmatic"
-        ],
-        "authenticityScore": 0.9
-      },
-      {
-        "category": "Problem-Solving & Technical Proficiency",
-        "tags": [
-          "Technical",
-          "Problem-Solver",
-          "AWS",
-          "API"
-        ],
-        "authenticityScore": 0.95
-      },
-      {
-        "category": "Decision-Making & Leadership",
-        "tags": [
-          "Leadership",
-          "Decision-Making",
-          "Prioritization",
-          "Delegation",
-          "Adaptability"
-        ],
-        "authenticityScore": 0.92
       }
     ]
   }

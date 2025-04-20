@@ -25,13 +25,11 @@ app.post('/analyze-behavior', async (req, res) => {
     req.on('data', chunk => body += chunk);
     req.on('end', async () => {
       const responses = JSON.parse(body);
-      const analysis = await analyzeBehaviorResponses(responses);
-
-      // Write to final report JSON
-      const reportPath = 'backend/outputs/finalReport.json';
-      const existing = JSON.parse(fs.readFileSync(reportPath));
-      existing.behavioralAnalysis = analysis;
-      fs.writeFileSync(reportPath, JSON.stringify(existing, null, 2));
+// Write raw answers directly without Gemini
+const reportPath = 'backend/outputs/finalReport.json';
+const existing = JSON.parse(fs.readFileSync(reportPath));
+existing.behavioralAnswers = responses; // ⬅️ saved as-is, no tags or scores
+fs.writeFileSync(reportPath, JSON.stringify(existing, null, 2));
 
       res.json({ success: true });
     });
@@ -78,6 +76,7 @@ app.post('/upload', upload.single('resume'), async (req, res) => {
   
       let parsedOutput = await extractResumeExperience(resumeText);
       let customQuestions = await generateCustomQuestions(parsedOutput);
+      console.log('\n🧠 Full custom questions (raw):\n', customQuestions);
   
       console.log('Raw parsed output:', parsedOutput);
       console.log('Raw custom questions:', customQuestions);

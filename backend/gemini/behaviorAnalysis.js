@@ -5,34 +5,32 @@ export async function analyzeBehaviorResponses(responses) {
   const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
   const prompt = `
-You are an expert behavioral psychologist and AI assistant.
-
-You will be given 5 behavioral questions, user answers, and how long they took to respond.
-
-One of the four answer options in each question is intentionally incorrect or nonsensical (e.g., completely unrelated to the question). Use this to detect inattentive users.
-
-Label each answer with:
-- Tags (e.g., 'Loyal', 'EQ-Driven', 'Growth-Oriented', 'Results-Focused', etc.)
-- Authenticity score (0-1, based on instinctiveness vs. fabricated)
-- Category (which of the 5 it maps to)
-
-Return valid JSON:
-{
-  "analysis": [
-    {
-      "category": "Loyalty",
-      "tags": [...],
-      "authenticityScore": 0.82
-    },
-    ...
-  ]
-}
-
-Do not explain anything.
-
-Input:
-${JSON.stringify(responses, null, 2)}
-`;
+  You are an intelligent AI assistant that creates custom behavioral evaluation questions for candidates.
+  
+  From the following resume experience and projects, create **exactly 5** high-quality behavioral/thinking questions.
+  
+  Guidelines:
+  - Each question must relate to a real experience or project from the resume
+  - Each must include **4 distinct multiple-choice options**
+  - Do NOT return fewer than 5
+  - If the resume is lacking content, create generic leadership/product questions **inspired by** what’s available
+  
+  Format (strictly JSON):
+  {
+    "questions": [
+      {
+        "question": "string",
+        "basedOn": "string",
+        "options": ["string", "string", "string", "string"]
+      },
+      ...
+      // total = 5
+    ]
+  }
+  
+  Resume Experience and Projects:
+  ${parsedExperience}
+  `;
 
   try {
     const response = await axios.post(
