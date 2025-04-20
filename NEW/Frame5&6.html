@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Final Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .star {
+      filter: blur(0.6px);
+    }
+  </style>
+</head>
+<body class="m-0 p-0 bg-gradient-to-b from-[#4B3B9B] via-[#5B4BA8] to-[#7B63C6] relative min-h-screen overflow-hidden text-white font-serif">
+
+  <!-- Starry Background -->
+  <div class="absolute inset-0 z-0">
+    <div class="w-full h-full relative">
+      <!-- same stars from before -->
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:7%; left:12%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:18%; left:78%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-60" style="width:2px; height:2px; top:25%; left:33%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:3px; height:3px; top:40%; left:55%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:53%; left:20%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:60%; left:85%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-60" style="width:3px; height:3px; top:68%; left:42%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:75%; left:10%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:82%; left:67%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:90%; left:30%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:95%; left:80%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-40" style="width:2px; height:2px; top:12%; left:45%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:3px; height:3px; top:35%; left:15%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:48%; left:72%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:77%; left:38%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:85%; left:53%;"></span>
+      <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:92%; left:25%;"></span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 flex justify-center items-start gap-10 px-10 py-12">
+    <!-- Left Section -->
+    <div class="flex flex-col items-start w-full md:w-[420px] h-full">
+      <h1 class="text-5xl font-bold leading-tight mb-10">YOUR<br>FINAL<br>REPORT</h1>
+      <h2 class="text-3xl font-semibold mb-4">Top 3 Strengths</h2>
+      <ul class="list-disc ml-6 text-xl space-y-2">
+        <li>Results driven</li>
+        <li>Loyal</li>
+        <li>Quick decision maker</li>
+      </ul>
+
+      <div class="bg-[#dabcf6] rounded-2xl p-5 w-full mt-[50%]">
+        <div class="bg-[#b695e6] rounded-lg p-4 space-y-4">
+          <h3 class="text-xl font-semibold text-center">Strength Distribution</h3>
+          <div class="flex justify-around">
+            <div class="flex flex-col items-center">
+              <div class="w-24 h-24 rounded-full border-8 border-white bg-white/40 animate-pulse" data-fill="{{results_value}}"></div>
+              <p class="mt-2 text-sm font-medium">Results</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-24 h-24 rounded-full border-8 border-white bg-white/40 animate-pulse" data-fill="{{loyalty_value}}"></div>
+              <p class="mt-2 text-sm font-medium">Loyalty</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-24 h-24 rounded-full border-8 border-white bg-white/40 animate-pulse" data-fill="{{decisions_value}}"></div>
+              <p class="mt-2 text-sm font-medium">Decisions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="w-full md:w-[460px] bg-[#c5a6f0] text-black rounded-2xl p-6 shadow-xl space-y-5 h-full">
+      <h2 class="text-5xl font-bold">JAMES MILLER</h2>
+      <p class="text-2xl mt-2"><span>Experience:</span> <span>{{experience}}</span></p>
+      <p class="text-2xl"><span>Projects:</span> <span>{{projects}}</span></p>
+
+      <div class="bg-[#b695e6] rounded-lg p-3 text-xl">
+        <h3 class="text-2xl font-semibold mb-1">Emotional Assessment</h3>
+        <div class="flex justify-between text-lg">
+          <div>
+            <p><span>Loyalty:</span> <span>{{loyalty}}</span></p>
+            <p><span>Growth:</span> <span>{{growth}}</span></p>
+          </div>
+          <div>
+            <p><span>Emotional IQ:</span> <span>{{emotional_iq}}</span></p>
+            <p><span>Results:</span> <span>{{results}}</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#b695e6] rounded-lg p-3 text-center text-xl font-medium">
+        Average time taken to respond:<br><span class="font-bold text-3xl transition-all duration-700 ease-in-out">{{response_time}}</span>
+      </div>
+
+      <div class="bg-[#b695e6] rounded-lg p-3 text-xl">
+        <p class="font-bold">Analysis:</p>
+        <p>{{analysis}}</p>
+      </div>
+
+      <div class="bg-[#b695e6] rounded-lg p-3 text-xl">
+        <p class="font-bold">Recruiter is looking for:</p>
+        <p>{{recruiter_looking}}</p>
+      </div>
+
+      <div class="pt-2 text-3xl font-bold">
+        DESIRABILITY<br>SCORE <span class="text-green-600 text-6xl block mt-2 transition-all duration-700 ease-in-out">{{score}}</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
