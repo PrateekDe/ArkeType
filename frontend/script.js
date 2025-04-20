@@ -2,12 +2,10 @@
 const userType = sessionStorage.getItem('userType');
 
 if (!userType) {
-  // No userType? Force back to login screen
   window.location.href = 'login.html';
 } else {
   console.log('User logged in as:', userType);
 }
-
 
 // Upload Page (index.html)
 if (document.getElementById('resumeInput')) {
@@ -32,12 +30,7 @@ if (document.getElementById('resumeInput')) {
 
     try {
       uploadBtn.disabled = true;
-      uploadBtn.innerHTML = `
-        <div class="spinner"></div>
-      `;
-      
-
-  
+      uploadBtn.innerHTML = `<div class="spinner"></div>`;
 
       await fetch('/upload', {
         method: 'POST',
@@ -45,17 +38,14 @@ if (document.getElementById('resumeInput')) {
       });
 
       window.location.href = 'loading.html';
-
-     
     } catch (err) {
       console.error('Upload failed:', err);
-      // alert('Upload failed. Try again.');
       uploadBtn.textContent = 'Upload ➔';
     }
   });
 }
 
-// Result1 Page (result1.html)
+// Result1 Page (Experience and Projects)
 if (document.getElementById('resultContainer1')) {
   fetch('/report')
     .then(res => res.json())
@@ -64,7 +54,6 @@ if (document.getElementById('resultContainer1')) {
         document.getElementById('resultContainer1').innerHTML = '<p>Report not available.</p>';
         return;
       }
-
       const experienceDiv = document.getElementById('experience');
       experienceDiv.innerHTML = '<h2>Experience & Projects</h2>';
 
@@ -75,12 +64,8 @@ if (document.getElementById('resultContainer1')) {
               <h2>${exp.Role} at ${exp.Company}</h2>
               <p><strong>Location:</strong> ${exp.Location}</p>
               <p><strong>Dates:</strong> ${exp.Dates}</p>
-              <p><strong>Responsibilities:</strong></p>
-              <ul>
-                ${exp.Responsibilities.map(r => `<li>${r}</li>`).join('')}
-              </ul>
-            </div>
-          `;
+              <ul>${exp.Responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+            </div>`;
         });
       }
 
@@ -91,32 +76,28 @@ if (document.getElementById('resultContainer1')) {
               <h2>Project: ${proj.Name || proj.Role || 'Project'}</h2>
               <p><strong>Description:</strong> ${proj.Description || 'No description'}</p>
               <p><strong>Date:</strong> ${proj.Date || 'N/A'}</p>
-              <p><strong>Details:</strong></p>
-              <ul>
-                ${(proj.Details || []).map(d => `<li>${d}</li>`).join('')}
-              </ul>
-            </div>
-          `;
+              <ul>${(proj.Details || []).map(d => `<li>${d}</li>`).join('')}</ul>
+            </div>`;
         });
       }
 
-      // Handle Next Button
       const nextBtn = document.getElementById('toQuestionsBtn');
       nextBtn.addEventListener('click', () => {
         window.location.href = 'result2.html';
       });
     })
     .catch(err => {
-      console.error('Error fetching report:', err);
+      console.error('Error fetching experience:', err);
     });
 }
 
+// Result2 Page (Customized Questions)
 if (document.getElementById('resultContainer2')) {
   fetch('/report')
     .then(res => res.json())
     .then(data => {
       if (!data.customizedQuestions) {
-        document.getElementById('resultContainer2').innerHTML = '<p>No customized questions available.</p>';
+        document.getElementById('resultContainer2').innerHTML = '<p>No customized questions found.</p>';
         return;
       }
 
@@ -126,36 +107,36 @@ if (document.getElementById('resultContainer2')) {
       if (data.customizedQuestions.questions) {
         data.customizedQuestions.questions.forEach((q, qIndex) => {
           questionsDiv.innerHTML += `
-            <div class="card">
-              <h2>Question based on: ${q.basedOn}</h2>
-              <p>${q.question}</p>
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-white">${q.question}</h2>
               ${q.options ? `
-                <ul>
+                <div class="flex flex-col gap-4">
                   ${q.options.map((opt, optIndex) => `
-                 
-                      <label>
-                        <input type="radio" name="question-${qIndex}" value="${opt}">
-                        ${opt}
-                      </label><br>
-                    
+                    <label class="flex items-center gap-2 text-white">
+                      <input type="radio" name="question-${qIndex}" value="${opt}" class="accent-purple-500 scale-125">
+                      ${opt}
+                    </label>
                   `).join('')}
-                </ul>
+                </div>
               ` : ''}
             </div>
           `;
         });
       }
 
-      // Handle Submit Answers button
       const questionsForm = document.getElementById('questionsForm');
+      const submitBtn = document.getElementById('submitAnswersBtn');
 
-      if (questionsForm) {   // ✅ Check if form exists
+      if (questionsForm) {
         questionsForm.addEventListener('submit', (e) => {
           e.preventDefault();
-      
+
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<div class="animate-spin h-6 w-6 border-4 border-white border-t-transparent rounded-full mx-auto"></div>`;
+
           const formData = new FormData(questionsForm);
           const responses = [];
-      
+
           data.customizedQuestions.questions.forEach((q, qIndex) => {
             const selected = formData.get(`question-${qIndex}`);
             responses.push({
@@ -164,39 +145,35 @@ if (document.getElementById('resultContainer2')) {
               selectedAnswer: selected || 'No answer'
             });
           });
-      
-          console.log('✅ Collected Customized Answers:', responses);
-      
+
+          console.log('✅ Customized Responses:', responses);
+
           fetch('/save-customized-json', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(responses)
           })
           .then(() => {
-            alert('Customized answers submitted successfully!');
             window.location.href = 'behavior.html';
           })
           .catch(err => {
-            console.error('❌ Failed to save customized answers:', err);
-            alert('Failed to submit answers. Try again.');
+            console.error('❌ Error saving customized answers:', err);
+            alert('Failed to submit answers.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Next ➔ Behavioral Assessment';
           });
         });
-      } else {
-        console.error('❌ Form not found, cannot attach submit event.');
       }
-      
     })
     .catch(err => {
-      console.error('Error fetching report:', err);
+      console.error('Error fetching customized questions:', err);
     });
 }
 
-
-
+// Final Result Page (result.html)
 if (document.getElementById('finalResultContainer')) {
   const loader = document.getElementById('loader');
   const finalContainer = document.getElementById('finalResultContainer');
-
 
   fetch('/report')
     .then(res => res.json())
@@ -206,7 +183,6 @@ if (document.getElementById('finalResultContainer')) {
         return;
       }
 
-      // 🧠 Experience + Projects
       const experienceDiv = document.getElementById('experienceList');
       if (data.parsedExperience.Experience) {
         data.parsedExperience.Experience.forEach(exp => {
@@ -216,10 +192,10 @@ if (document.getElementById('finalResultContainer')) {
               <p><strong>Location:</strong> ${exp.Location}</p>
               <p><strong>Dates:</strong> ${exp.Dates}</p>
               <ul>${exp.Responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
-            </div>
-          `;
+            </div>`;
         });
       }
+
       if (data.parsedExperience.Projects) {
         data.parsedExperience.Projects.forEach(proj => {
           experienceDiv.innerHTML += `
@@ -228,12 +204,10 @@ if (document.getElementById('finalResultContainer')) {
               <p><strong>Description:</strong> ${proj.Description || 'No description'}</p>
               <p><strong>Date:</strong> ${proj.Date || 'N/A'}</p>
               <ul>${(proj.Details || []).map(d => `<li>${d}</li>`).join('')}</ul>
-            </div>
-          `;
+            </div>`;
         });
       }
 
-      // 🛠 Customized Questions Answers
       const customizedDiv = document.getElementById('customizedList');
       if (data.customizedAnswers) {
         data.customizedAnswers.forEach(ans => {
@@ -241,12 +215,10 @@ if (document.getElementById('finalResultContainer')) {
             <div class="card">
               <p><strong>Question:</strong> ${ans.question}</p>
               <p><strong>Selected Answer:</strong> ${ans.selectedAnswer}</p>
-            </div>
-          `;
+            </div>`;
         });
       }
 
-      // 💬 Behavioral Answers
       const behaviorDiv = document.getElementById('behaviorList');
       if (data.behavioralAnswers) {
         data.behavioralAnswers.forEach(behavior => {
@@ -255,16 +227,14 @@ if (document.getElementById('finalResultContainer')) {
               <p><strong>Question:</strong> ${behavior.question}</p>
               <p><strong>Selected Answer:</strong> ${behavior.answer}</p>
               <p><em>Time taken:</em> ${behavior.responseTime} seconds</p>
-            </div>
-          `;
+            </div>`;
         });
       }
 
-      // ✅ After normal report loaded, generate Executive Summary
-      if(userType==="recruiter")
-      generateFinalSummaryFromAI();
+      if (userType === "recruiter") {
+        generateFinalSummaryFromAI();
+      }
 
-      // ✅ Hide Loader and show the actual Report
       loader.style.display = 'none';
       finalContainer.style.display = 'block';
     })
@@ -274,40 +244,31 @@ if (document.getElementById('finalResultContainer')) {
     });
 }
 
-// 🧠 Function to fetch AI analyzed executive summary
+// Function to fetch AI Analyzed Executive Summary
 function generateFinalSummaryFromAI() {
-
-  const summaryLoader = document.getElementById('summaryLoader'); // 🆕
-
+  const summaryLoader = document.getElementById('summaryLoader');
 
   fetch('/final-report')
     .then(res => res.json())
     .then(analysis => {
       const container = document.getElementById('finalResultContainer');
 
-          // 🆕 Remove the loader when AI summary is ready
-          if (summaryLoader) {
-            summaryLoader.remove();
-          }
+      if (summaryLoader) summaryLoader.remove();
 
       container.innerHTML += `
         <section class="summary-card">
           <h2>📋 Executive Summary (AI analyzed)</h2>
-
           <div class="card">
             <h3>Emotional Assessment</h3>
             <p>Loyalty: ${analysis.loyaltyPercent}%</p>
             <p>Emotional IQ: ${analysis.emotionalIQPercent}%</p>
             <p>Company Growth Potential: ${analysis.companyGrowthPercent}%</p>
             <p>Results Focus: ${analysis.resultsFocusPercent}%</p>
-
             <h3>Behavioral Response</h3>
             <p>Average Response Time: ${analysis.averageResponseTime} seconds</p>
             <p>Instinctiveness: ${analysis.instinctivenessScore}</p>
-
             <h3>Final Verdict</h3>
             <p>${analysis.overallAnalysis}</p>
-
             <h2 style="color: black;">Desirability Score: ${analysis.desirabilityScore}%</h2>
           </div>
         </section>
@@ -316,21 +277,4 @@ function generateFinalSummaryFromAI() {
     .catch(err => {
       console.error('Error loading final AI report:', err);
     });
-}
-
-
-
-// 🆕 Helper: Fetch latest customized answers
-async function fetchLatestCustomized() {
-  try {
-    const files = await fetch('/outputs').then(res => res.json());
-    const customizedFile = files.find(f => f.includes('finalCustomizedAnswers'));
-    if (customizedFile) {
-      const customizedData = await fetch(`/outputs/${customizedFile}`).then(res => res.json());
-      return customizedData;
-    }
-  } catch (err) {
-    console.error('Failed fetching customized answers:', err);
-    return [];
-  }
 }

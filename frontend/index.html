@@ -2,35 +2,180 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to Parapersona</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container upload-page">
-    <div class="left">
-      <h1>Welcome to <span class="highlight">Parapersona</span></h1>
-      <p>Let's get started</p>
-      <div class="steps">
-        <button class="step-btn">Behavioral Assessment</button>
-        <button class="step-btn">Personalized Questions</button>
-        <button class="step-btn">Desirability Score</button>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" style="width: 5%;"></div>
-      </div>
-      <p class="progress-text">5%</p>
-    </div>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        transform: translate3d(0, 40px, 0);
+        opacity: 0;
+      }
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
 
-    <div class="right upload-box" style="cursor: pointer;" onclick="document.getElementById('resumeInput').click();">
-      <input type="file" id="resumeInput" accept=".pdf" hidden>
-      <div class="upload-icon">📄</div>
-      <h2>Upload your resume</h2>
-      <p>Drag and drop file here, or</p>
-      <button id="uploadBtn" class="primary-button" disabled>Begin Upload</button>
-      <p id="uploadStatus" class="upload-status"></p>
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    .fade-delay-1 { animation-delay: 0.3s; }
+    .fade-delay-2 { animation-delay: 0.6s; }
+    .fade-delay-3 { animation-delay: 0.9s; }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #4B3B9B, #5B4BA8, #7B63C6);
+      position: relative;
+    }
+    .star {
+      filter: blur(0.6px);
+    }
+  </style>
+</head>
+<body class="m-0 p-0 bg-gradient-to-b from-[#4B3B9B] via-[#5B4BA8] to-[#7B63C6] relative min-h-screen overflow-hidden">
+<!-- Stars -->
+<div class="absolute inset-0">
+    <div class="w-full h-full relative animate__animated animate__fadeIn">
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:7%; left:12%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:18%; left:78%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-60" style="width:2px; height:2px; top:25%; left:33%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:3px; height:3px; top:40%; left:55%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:53%; left:20%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:60%; left:85%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-60" style="width:3px; height:3px; top:68%; left:42%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:75%; left:10%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:82%; left:67%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:90%; left:30%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:95%; left:80%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:2px; height:2px; top:12%; left:45%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:3px; height:3px; top:35%; left:15%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:48%; left:72%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:77%; left:38%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:85%; left:53%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:92%; left:25%;"></span>
+  </div>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; padding: 2rem; gap: 8vw; font-family: 'Segoe UI', sans-serif; color: white;">
+  <!-- Left Section -->
+  <div style="max-width: 50%;" class="fade-in-up fade-delay-1">
+    <h1 style="font-size: 3.5rem; font-weight: bold; margin-bottom: 0.2rem;">Welcome to<br>Parapersona</h1>
+    <h2 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 2rem;">Let's get started</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+      <div class="fade-in-up fade-delay-1" style="background: rgba(255,255,255,0.1); border-radius: 999px; padding: 0.75rem 2rem; color: white; font-size: 1rem; backdrop-filter: blur(6px); box-shadow: inset 0 0 2px rgba(255,255,255,0.4); text-align: center;">Behavioral Assessment</div>
+      <div class="fade-in-up fade-delay-2" style="background: rgba(255,255,255,0.1); border-radius: 999px; padding: 0.75rem 2rem; color: white; font-size: 1rem; backdrop-filter: blur(6px); box-shadow: inset 0 0 2px rgba(255,255,255,0.4); text-align: center;">Personalized Questions</div>
+      <div class="fade-in-up fade-delay-3" style="background: rgba(255,255,255,0.1); border-radius: 999px; padding: 0.75rem 2rem; color: white; font-size: 1rem; backdrop-filter: blur(6px); box-shadow: inset 0 0 2px rgba(255,255,255,0.4); text-align: center;">Desirability Score</div>
     </div>
+    <div style="width: 100%; background: rgba(255,255,255,0.1); height: 6px; border-radius: 999px; overflow: hidden;">
+      <div style="height: 100%; width: 5%; background: #e9aefc;"></div>
+    </div>
+    <!-- Placeholder for dynamic progress percentage -->
+    <div id="progress-percentage" style="margin-top: 0.5rem; font-size: 0.9rem;">5%</div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Right Section -->
+  <div class="fade-in-up fade-delay-2" style="background: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 1rem;
+padding: 2rem 3rem;
+box-shadow:
+  0 15px 30px rgba(0, 0, 0, 0.3),
+  inset 0 2px 8px rgba(255, 255, 255, 0.15),
+  0 0 30px rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+text-align: center;
+width: 360px;">
+    <div style="font-size: 3rem; margin-bottom: 1rem;">📄</div>
+    <h2 style="margin: 0 0 0.5rem 0; font-size: 1.5rem;">Upload your resume</h2>
+    <p style="margin: 0 0 2rem 0; color: #ccc;">Drag and drop file here, or</p>
+
+
+
+
+    <!-- Placeholder for upload functionality -->
+    
+    <input type="file" id="resume-upload" style="display: none;" />
+    <label for="resume-upload" style="cursor: pointer; background: rgba(255,255,255,0.15); border: none; padding: 0.65rem 1.75rem; border-radius: 12px; font-size: 0.9rem; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.2); backdrop-filter: blur(6px); display: inline-block;">
+      Begin Upload
+    </label>
+    <div id="drop-zone" style="margin-top: 1rem; padding: 1.5rem; border: 2px dashed rgba(255,255,255,0.3); border-radius: 10px; color: #ccc;">
+      Or drag and drop your resume here
+    </div>
+
+
+  </div>
+</div>
+</svg>
+<script>
+  const dropZone = document.getElementById('drop-zone');
+  const fileInput = document.getElementById('resume-upload');
+
+  dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.style.borderColor = '#e9aefc';
+  });
+
+  dropZone.addEventListener('dragleave', () => {
+    dropZone.style.borderColor = 'rgba(255,255,255,0.3)';
+  });
+
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.style.borderColor = 'rgba(255,255,255,0.3)';
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      fileInput.files = files;
+      console.log('File dropped:', files[0]);
+      startUpload(files[0]); // 🧠 CALLING startUpload() here!!
+    }
+  });
+
+  fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      console.log('File selected:', file);
+      startUpload(file); // 🧠 CALLING startUpload() here too!!
+    }
+  });
+
+  async function startUpload(file) {
+    if (!file) return;
+
+    try {
+      const uploadLabel = document.querySelector('label[for="resume-upload"]');
+      uploadLabel.innerHTML = `<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto"></div>`;
+
+      const formData = new FormData();
+      formData.append('resume', file);
+
+      console.log('🚀 Uploading...');
+      await fetch('/upload', {
+        method: 'POST',
+        body: formData
+      });
+
+      console.log('✅ Upload success! Moving to loading...');
+      window.location.href = 'loading.html';
+    } catch (err) {
+      console.error('❌ Upload failed:', err);
+      alert('Upload failed. Please try again.');
+    }
+  }
+</script>
+
 </body>
 </html>

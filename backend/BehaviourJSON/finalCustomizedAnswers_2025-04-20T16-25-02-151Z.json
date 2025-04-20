@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Imagine you are working on the Findr app again.  A critical bug is discovered right before the planned launch to ASU students.  This bug prevents users from logging in.  How would you approach this situation?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Launch the app as scheduled and address the login bug in the first update, prioritizing the initial release deadline."
+  },
+  {
+    "question": "During your internship at PwC, you discovered an anomaly in the dataset that significantly impacted the forecast accuracy. How did you approach investigating and resolving this issue?",
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "selectedAnswer": "Immediately alerted the team and sought their guidance on how to proceed with the investigation and correction."
+  },
+  {
+    "question": "While working on Resumagic, you realize that the Gemini API is experiencing unexpected downtime.  This prevents users from generating portfolio websites.  How would you handle this situation to mitigate user impact?",
+    "basedOn": "Resumagic",
+    "selectedAnswer": "Implement a fallback mechanism using a locally stored language model to provide limited functionality while the Gemini API is down."
+  },
+  {
+    "question": "During your time leading ParmarthNGO during the COVID-19 crisis, you faced unexpected logistical challenges.  A shipment of oxygen cylinders was significantly delayed. How did you react to this situation and what actions did you take?",
+    "basedOn": "ParmarthNGO",
+    "selectedAnswer": "Re-evaluated the entire supply chain and implemented new protocols to prevent future delays, prioritizing long-term solutions over immediate needs."
+  },
+  {
+    "question": "Reflecting on your work with the WheelEasy Foundation, how did you balance the need to implement new features with the goal of maintaining a user-friendly interface for the accessibility map?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "Focused on implementing the most requested features first, even if it meant temporarily compromising the simplicity of the interface."
+  }
+]

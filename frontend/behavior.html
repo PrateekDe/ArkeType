@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -103,5 +103,162 @@
 
     fetchQuestions();
   </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Behavioral Assessment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    .star { filter: blur(0.6px); }
+    @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+    .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
+  </style>
+</head>
+
+<body class="m-0 p-0 bg-gradient-to-b from-[#4B3B9B] via-[#5B4BA8] to-[#7B63C6] relative min-h-screen overflow-hidden">
+
+<!-- ✨ Stars Background -->
+<div class="absolute inset-0">
+  <div class="w-full h-full relative">
+    <!-- Stars (same as your Frame3) -->
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:7%; left:12%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:18%; left:78%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-60" style="width:2px; height:2px; top:25%; left:33%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:3px; height:3px; top:40%; left:55%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:53%; left:20%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:60%; left:85%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-60" style="width:3px; height:3px; top:68%; left:42%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:75%; left:10%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:82%; left:67%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:90%; left:30%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:95%; left:80%;"></span>
+  </div>
+</div>
+
+<!-- 🏔 Hills Background -->
+<svg class="absolute bottom-0 w-full h-3/5" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path fill="#7B63C6" d="M0 350C120 280 240 320 360 280C480 240 600 300 720 260C840 220 960 280 1080 240C1200 200 1320 260 1440 230V400H0V350Z" />
+  <path fill="#3F2A7A" d="M1440 350C1320 280 1200 320 1080 280C960 240 840 300 720 260C600 220 480 280 360 240C240 200 120 260 0 230V400H1440V350Z" />
+  <path fill="#5A47A3" d="M0 459C180 369 360 429 540 369C720 309 900 399 1080 339C1260 279 1440 369 1440 369V400H0V459Z" />
+</svg>
+
+<!-- 🧠 Behavioral Question Box -->
+<div class="absolute inset-0 flex items-center justify-center animate-fadeIn">
+  <div class="bg-white/20 backdrop-blur-2xl rounded-3xl px-8 py-10 md:py-14 md:px-16 w-full max-w-4xl mx-4 text-white shadow-2xl border border-white/30" style="transform: scale(0.8);" id="behaviorContainer">
+    <div class="space-y-4 md:space-y-6" id="questionBox">
+      <!-- Question dynamically injected here -->
+    </div>
+
+    <div class="mt-8 text-center">
+      <button id="nextBtn" class="px-8 py-3 bg-purple-600 hover:bg-purple-700 transition-all duration-200 rounded-full text-white text-lg font-semibold shadow-lg" disabled>
+        Submit Answer ➔
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 🎯 SCRIPT for Behavior Question Logic -->
+<script>
+  let questions = [];
+  const answers = [];
+  let currentIndex = 0;
+  let startTime = null;
+
+  const questionBox = document.getElementById('questionBox');
+  const nextBtn = document.getElementById('nextBtn');
+
+  async function fetchQuestions() {
+    try {
+      const res = await fetch('/report');
+      const data = await res.json();
+      questions = data.customizedQuestions.questions.slice(0, 5);
+      console.log('Loaded questions:', questions);
+      renderQuestion(currentIndex);
+    } catch (err) {
+      console.error('Failed to load questions:', err);
+      questionBox.innerHTML = '<p>Error loading questions. Try again later.</p>';
+    }
+  }
+
+  function renderQuestion(index) {
+    startTime = Date.now();
+    const q = questions[index];
+    questionBox.innerHTML = `
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center tracking-wide">Behavioral Assessment</h1>
+      <div class="text-center mt-4">
+        <p class="text-lg md:text-xl">Question <span class="font-semibold">${index + 1}</span> of <span class="font-semibold">${questions.length}</span></p>
+        <p class="text-sm md:text-base opacity-80 mt-1">Category: ${q.basedOn}</p>
+      </div>
+      <p class="text-xl md:text-2xl font-medium text-center leading-relaxed mt-6">${q.question}</p>
+      <div class="grid gap-4 mt-6" id="options-container">
+        ${q.options.map((opt, i) => `
+          <button class="option-btn px-6 py-4 bg-white/10 hover:bg-purple-500/40 transition-all duration-200 rounded-xl border border-white/20 text-left text-base md:text-lg font-medium shadow-md hover:shadow-lg backdrop-blur-sm" data-value="${opt}">
+            ${String.fromCharCode(65+i)}. ${opt}
+          </button>
+        `).join('')}
+      </div>
+    `;
+
+    // Activate option buttons
+    document.querySelectorAll('.option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('bg-purple-700'));
+        btn.classList.add('bg-purple-700');
+        nextBtn.disabled = false;
+      });
+    });
+    nextBtn.disabled = true;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    const endTime = Date.now();
+    const timeTaken = Math.round((endTime - startTime) / 1000);
+    const selectedBtn = document.querySelector('.option-btn.bg-purple-700');
+    const answer = selectedBtn ? selectedBtn.dataset.value : "";
+
+    answers.push({
+      basedOn: questions[currentIndex].basedOn,
+      question: questions[currentIndex].question,
+      answer,
+      responseTime: timeTaken
+    });
+
+    currentIndex++;
+    if (currentIndex < questions.length) {
+      renderQuestion(currentIndex);
+    } else {
+      submitAnswers();
+    }
+  });
+
+  function submitAnswers() {
+    fetch('/analyze-behavior', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(answers)
+    })
+    .then(() => fetch('/save-behavior-json', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(answers)
+    }))
+    .then(() => {
+      window.location.href = 'result.html';
+    })
+    .catch(err => {
+      console.error('Behavior submission failed:', err);
+      alert('Something went wrong. Try again.');
+    });
+  }
+
+  fetchQuestions();
+</script>
+
 </body>
 </html>

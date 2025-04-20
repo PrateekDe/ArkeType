@@ -2,173 +2,210 @@
   "parsedExperience": {
     "Experience": [
       {
-        "Role": "Software Development Engineer Intern",
-        "Company": "Amazon",
-        "Location": "Washington D.C., USA",
-        "Dates": "05/2023 – 08/2023",
+        "Company": "WheelEasy Foundation",
+        "Role": "Frontend and Backend developer Intern",
+        "Location": "Sydney, Australia (Online)",
+        "Dates": "Dec 2024 – present",
         "Responsibilities": [
-          "Set up product documentation to onboard future team members.",
-          "Developed a full-stack application (AWS Lambda, DynamoDB, S3, ECS, SQS, CloudFormation) for copyright infringement checks.",
-          "Completed internal courses for AutoGluon and Foundational ML."
+          "Improved the functionality of an interactive accessibility map",
+          "Optimized zoom-in and sidebar navigation features"
         ]
       },
       {
-        "Role": "Junior Researcher",
-        "Company": "Somaiya Vidyavihar, IN & Children’s Investment Fund Foundation (CIFF), U.K.",
-        "Location": "Mumbai, IN",
-        "Dates": "09/2019 - 03/2020",
+        "Company": "MindScribe",
+        "Role": "Founder and Backend Developer",
+        "Location": "Tempe, AZ",
+        "Dates": "Dec 2024 – present",
         "Responsibilities": [
-          "Led a team of six to research the impact of technology on Online Child Sexual Abuse (OCSA) and Exploitation (OCSE).",
-          "Developed a tool to automate search and filter instances of OCSA and OCSE in legal cases."
+          "Designed and implemented a backend system using Python for real-time emotion analysis and trend prediction with AI models (LSTM/Transformers)",
+          "Built RESTful APIs with Flask/FastAPI",
+          "Integrated encryption protocols and adaptive learning for user privacy and data security"
+        ]
+      },
+      {
+        "Company": "PricewaterhouseCoopers (PwC)",
+        "Role": "Data Science Intern",
+        "Location": "Bengaluru, IN",
+        "Dates": "May 2024 - Aug 2024",
+        "Responsibilities": [
+          "Enhanced the LightGBM algorithm with custom loss functions and feature engineering",
+          "Developed preprocessing methods for a dataset of 60,000 rows",
+          "Designed and fine-tuned an ensemble forecasting system combining SARIMA, LightGBM, and Transformers"
+        ]
+      },
+      {
+        "Company": "OpuLnt Technology LLC",
+        "Role": "Founder and Full Stack Developer",
+        "Location": "Tempe, AZ",
+        "Dates": "March 2024 – Nov 2024",
+        "Responsibilities": [
+          "Researched and planned backend architecture for a Dynamic Course Recommender app",
+          "Investigated machine learning libraries for personalized course recommendation algorithms",
+          "Evaluated web scraping tools and NLP libraries for gathering and analyzing course information"
+        ]
+      },
+      {
+        "Company": "AdpT LLC",
+        "Role": "Front End Developer",
+        "Location": "Tempe, AZ",
+        "Dates": "Dec 2023 – Feb 2024",
+        "Responsibilities": [
+          "Planned and designed an interface using vanilla JavaScript",
+          "Implemented features and interactions to elevate user experience"
+        ]
+      },
+      {
+        "Company": "ParmarthNGO",
+        "Role": "City Lead",
+        "Location": "Bengaluru, IN",
+        "Dates": "May 2021 – Aug 2021",
+        "Responsibilities": [
+          "Led a team of 200 in a startup initiative during the second wave of COVID-19 in India",
+          "Coordinated efforts to secure oxygen cylinders and essential supplies"
         ]
       }
     ],
     "Projects": [
       {
-        "Title": "Automating LLM-Assisted Tuning for LSM-KVS",
-        "Description": "Developed a framework that automates predicting workloads and setting tuning parameters for LSM-KVS using Modern LLMs."
+        "Name": "DocuQuery",
+        "Description": "Simple RAG-Based App",
+        "Date": "Apr 2025",
+        "Details": [
+          "Developed a document-based QA tool using semantic search and GPT-3.5",
+          "Processed PDFs into context windows using SentenceTransformers",
+          "Delivered real-time answers through a local Streamlit UI"
+        ]
       },
       {
-        "Title": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
-        "Description": "Developed a controller to enhance LSM-KVS performance using programmable network switches (P4 Switches) for operations and online configuration modifications."
+        "Name": "Resumagic",
+        "Description": "AI-Powered Web Tool",
+        "Date": "Apr 2025",
+        "Details": [
+          "Built a client-side AI tool using Gemini API and PDF.js to convert resumes into portfolio websites",
+          "Integrated AWS Lambda for Gemini API interactions and implemented usage throttling",
+          "Deployed the frontend via Amazon S3 and CloudFront"
+        ]
       },
       {
-        "Title": "An Exploration of High Throughput Timeseries Databases for Cutting-Edge Devices",
-        "Description": "Exploring the integration of ZNS devices for timeseries databases like InfluxDB."
+        "Name": "Findr by OpuLnt",
+        "Role": "Full Stack Developer",
+        "Date": "Dec 2024",
+        "Details": [
+          "Developed a lost-and-found app for ASU students, focusing on backend development",
+          "Designed secure systems for item listings and direct messaging"
+        ]
       },
       {
-        "Title": "Integrating Encryption into LSM-KVS in Monolith and Disaggregated Infrastructure",
-        "Description": "Designed and developed a scalable and decentralized encryption design for LSM-KVS in monolith and disaggregated infrastructure, including encryption key rotation."
+        "Name": "EventFinder",
+        "Description": "iOS Application",
+        "Date": "Apr 2024",
+        "Details": [
+          "Developed an iOS app for event searching based on pincode and distance",
+          "Integrated with Ticketmaster Discovery API and CoreLocation",
+          "Used SwiftUI, CoreData, and MVVM architecture"
+        ]
       },
       {
-        "Title": "CGroup - Manager",
-        "Description": "A Python library to start and monitor a Linux process using cgroups."
+        "Name": "ThriveSpace",
+        "Description": "Your Personal Mental Health Companion",
+        "Date": "Dec 2023",
+        "Details": [
+          "Developed a full-stack web app for mental well-being",
+          "Designed secure systems for data privacy"
+        ]
       },
       {
-        "Title": "Memories",
-        "Description": "A Python library for Image Segmentation."
-      },
-      {
-        "Title": "Hackathon by SVB & ASU",
-        "Description": "Developed a full-stack web application connecting investors and startups. Achieved second place."
+        "Name": "Hacks for Humanity",
+        "Description": "Blue Star Mothers (Hackathon)",
+        "Date": "Oct 2023",
+        "Details": [
+          "Implemented an OTP password generator login system for a website",
+          "Orchestrated back-end development for the full-stack project",
+          "Constructed sections of the database and applied the 6-Sigma (DMAIC) concept"
+        ]
       }
     ],
-    "Roles": [
-      "Ph.D. Student",
-      "M.S. Computer Science"
-    ]
+    "Roles": []
   },
   "customizedQuestions": {
     "questions": [
       {
-        "question": "Imagine you're onboarding a new team member to a complex project involving AWS Lambda, DynamoDB, S3, ECS, SQS, and CloudFormation. What's your primary focus during the initial onboarding process?",
-        "basedOn": "Software Development Engineer Intern - Amazon",
+        "question": "Imagine you are working on the WheelEasy map again and a critical bug emerges during peak usage, preventing users from accessing accessibility information.  How do you prioritize your next steps?",
+        "basedOn": "WheelEasy Foundation",
         "options": [
-          "Diving deep into the technical intricacies of each AWS service used in the project.",
-          "Providing a high-level overview of the project's architecture and its components.",
-          "Focusing on the practical, hands-on coding aspects, letting them explore the services on their own.",
-          "Prioritizing establishing clear communication channels and expectations for their role."
+          "Immediately revert to the previous stable version and then investigate the bug.",
+          "Focus on identifying the root cause of the bug before taking any action.",
+          "Communicate the issue to users, offering a temporary workaround while working on a fix.",
+          "Begin working on a hotfix while simultaneously investigating the root cause and communicating with affected users."
         ]
       },
       {
-        "question": "During your research on Online Child Sexual Abuse (OCSA), you faced conflicting viewpoints within the team about the best approach to filter instances. How did you navigate this situation?",
-        "basedOn": "Junior Researcher - Somaiya Vidyavihar & CIFF",
+        "question": "During your time at PwC, you worked with a large dataset.  Reflecting on that experience, what was your most valuable learning regarding data preprocessing?",
+        "basedOn": "PricewaterhouseCoopers (PwC)",
         "options": [
-          "Took charge and made the final decision based on your own understanding of the problem.",
-          "Facilitated a discussion to understand everyone's perspective, then guided the team toward a consensus.",
-          "Conducted a small pilot study to test each proposed approach and let the data guide the decision.",
-          "Deferred to the senior researcher's expertise and implemented their preferred approach."
+          "The importance of automated data cleaning scripts for efficiency.",
+          "Understanding the data's nuances and its impact on model performance.",
+          "The value of using established preprocessing libraries to save time.",
+          "The need for meticulous documentation of each preprocessing step."
         ]
       },
       {
-        "question": "While developing the framework for automating LLM-assisted tuning for LSM-KVS, you discovered a more efficient but less conventional method.  Your supervisor initially prefers the established approach. How do you proceed?",
-        "basedOn": "Automating LLM-Assisted Tuning for LSM-KVS",
+        "question": "In developing Resumagic, you used AWS Lambda.  Imagine the cost of Lambda functions unexpectedly skyrockets. What is your initial course of action?",
+        "basedOn": "Resumagic",
         "options": [
-          "Implement the established approach first, then demonstrate the benefits of the new method through comparative analysis.",
-          "Respectfully explain the advantages of the new method, supporting it with data and potential risks.",
-          "Implement the new method discreetly and present the improved results once it's proven successful.",
-          "Defer to your supervisor's judgment and follow their guidance on the established approach."
+          "Immediately reduce Lambda usage by implementing stricter rate limiting.",
+          "Investigate CloudWatch logs and metrics to understand the cause of the increased cost.",
+          "Switch to a different serverless platform to potentially lower costs.",
+          "Contact AWS support to inquire about potential billing errors or unusual activity."
         ]
       },
       {
-        "question": "You encountered unexpected performance bottlenecks while leveraging programmable network switches for LSM-KVS operations.  How do you approach debugging and resolving this issue?",
-        "basedOn": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
+        "question": "During your time leading ParmarthNGO, you had to make quick decisions under pressure. Can you describe a situation where your initial plan didn't work, and how you adapted?",
+        "basedOn": "ParmarthNGO",
         "options": [
-          "Systematically isolate each component and conduct performance tests to pinpoint the bottleneck.",
-          "Reach out to online communities and forums for potential solutions encountered by others.",
-          "Review the existing codebase thoroughly to identify potential logical errors and inefficiencies.",
-          "Focus on optimizing the P4 switch programming first, assuming the bottleneck lies within its logic."
+          "Our initial supplier for oxygen cylinders backed out.  I immediately contacted backup suppliers and negotiated expedited delivery, even at a higher cost.",
+          "We faced transportation challenges due to lockdown restrictions.  I re-organized our logistics, leveraging local volunteers with permits for essential services.",
+          "The demand for supplies overwhelmed our initial estimates. I implemented a triage system, prioritizing critical needs and seeking additional resources from government agencies.",
+          "Communication breakdowns hindered coordination efforts. I established clear communication channels and reporting structures, ensuring real-time updates and accountability."
         ]
       },
       {
-        "question": "Your team placed second in the SVB & ASU hackathon.  Reflecting back, what's one key improvement you would make to the project given more time?",
-        "basedOn": "Hackathon by SVB & ASU",
+        "question": "Reflecting on the development of Findr by OpuLnt, what was the biggest challenge you encountered related to designing secure systems, and how did you overcome it?",
+        "basedOn": "Findr by OpuLnt",
         "options": [
-          "Refine the user interface and user experience design for better accessibility and aesthetics.",
-          "Implement more advanced features and functionalities to enhance the application's core offering.",
-          "Conduct thorough testing and bug fixing to ensure a stable and robust application.",
-          "Focus on improving the scalability and performance of the application to handle larger loads."
+          "Protecting user data during transmission. We implemented end-to-end encryption for all direct messages and item listings.",
+          "Securing the backend against unauthorized access. We implemented robust authentication and authorization mechanisms, including multi-factor authentication.",
+          "Preventing spam and fraudulent listings.  We developed a system for user verification and reporting suspicious activity, combined with automated content moderation.",
+          "Balancing security with user experience.  We streamlined the security measures to minimize friction for users while maintaining a high level of protection."
         ]
       }
     ]
   },
   "customizedAnswers": [
     {
-      "question": "Imagine you're onboarding a new team member to a complex project involving AWS Lambda, DynamoDB, S3, ECS, SQS, and CloudFormation. What's your primary focus during the initial onboarding process?",
-      "basedOn": "Software Development Engineer Intern - Amazon",
-      "selectedAnswer": "Focusing on the practical, hands-on coding aspects, letting them explore the services on their own."
+      "question": "Imagine you are working on the WheelEasy map again and a critical bug emerges during peak usage, preventing users from accessing accessibility information.  How do you prioritize your next steps?",
+      "basedOn": "WheelEasy Foundation",
+      "selectedAnswer": "No answer"
     },
     {
-      "question": "During your research on Online Child Sexual Abuse (OCSA), you faced conflicting viewpoints within the team about the best approach to filter instances. How did you navigate this situation?",
-      "basedOn": "Junior Researcher - Somaiya Vidyavihar & CIFF",
-      "selectedAnswer": "Deferred to the senior researcher's expertise and implemented their preferred approach."
+      "question": "During your time at PwC, you worked with a large dataset.  Reflecting on that experience, what was your most valuable learning regarding data preprocessing?",
+      "basedOn": "PricewaterhouseCoopers (PwC)",
+      "selectedAnswer": "No answer"
     },
     {
-      "question": "While developing the framework for automating LLM-assisted tuning for LSM-KVS, you discovered a more efficient but less conventional method.  Your supervisor initially prefers the established approach. How do you proceed?",
-      "basedOn": "Automating LLM-Assisted Tuning for LSM-KVS",
-      "selectedAnswer": "Implement the new method discreetly and present the improved results once it's proven successful."
+      "question": "In developing Resumagic, you used AWS Lambda.  Imagine the cost of Lambda functions unexpectedly skyrockets. What is your initial course of action?",
+      "basedOn": "Resumagic",
+      "selectedAnswer": "No answer"
     },
     {
-      "question": "You encountered unexpected performance bottlenecks while leveraging programmable network switches for LSM-KVS operations.  How do you approach debugging and resolving this issue?",
-      "basedOn": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
-      "selectedAnswer": "Focus on optimizing the P4 switch programming first, assuming the bottleneck lies within its logic."
+      "question": "During your time leading ParmarthNGO, you had to make quick decisions under pressure. Can you describe a situation where your initial plan didn't work, and how you adapted?",
+      "basedOn": "ParmarthNGO",
+      "selectedAnswer": "No answer"
     },
     {
-      "question": "Your team placed second in the SVB & ASU hackathon.  Reflecting back, what's one key improvement you would make to the project given more time?",
-      "basedOn": "Hackathon by SVB & ASU",
-      "selectedAnswer": "Implement more advanced features and functionalities to enhance the application's core offering."
-    }
-  ],
-  "behavioralAnswers": [
-    {
-      "basedOn": "Software Development Engineer Intern - Amazon",
-      "question": "Imagine you're onboarding a new team member to a complex project involving AWS Lambda, DynamoDB, S3, ECS, SQS, and CloudFormation. What's your primary focus during the initial onboarding process?",
-      "answer": "Providing a high-level overview of the project's architecture and its components.",
-      "responseTime": 2
-    },
-    {
-      "basedOn": "Junior Researcher - Somaiya Vidyavihar & CIFF",
-      "question": "During your research on Online Child Sexual Abuse (OCSA), you faced conflicting viewpoints within the team about the best approach to filter instances. How did you navigate this situation?",
-      "answer": "Deferred to the senior researcher's expertise and implemented their preferred approach.",
-      "responseTime": 2
-    },
-    {
-      "basedOn": "Automating LLM-Assisted Tuning for LSM-KVS",
-      "question": "While developing the framework for automating LLM-assisted tuning for LSM-KVS, you discovered a more efficient but less conventional method.  Your supervisor initially prefers the established approach. How do you proceed?",
-      "answer": "Respectfully explain the advantages of the new method, supporting it with data and potential risks.",
-      "responseTime": 2
-    },
-    {
-      "basedOn": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
-      "question": "You encountered unexpected performance bottlenecks while leveraging programmable network switches for LSM-KVS operations.  How do you approach debugging and resolving this issue?",
-      "answer": "Systematically isolate each component and conduct performance tests to pinpoint the bottleneck.",
-      "responseTime": 1
-    },
-    {
-      "basedOn": "Hackathon by SVB & ASU",
-      "question": "Your team placed second in the SVB & ASU hackathon.  Reflecting back, what's one key improvement you would make to the project given more time?",
-      "answer": "Implement more advanced features and functionalities to enhance the application's core offering.",
-      "responseTime": 3
+      "question": "Reflecting on the development of Findr by OpuLnt, what was the biggest challenge you encountered related to designing secure systems, and how did you overcome it?",
+      "basedOn": "Findr by OpuLnt",
+      "selectedAnswer": "No answer"
     }
   ]
 }

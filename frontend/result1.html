@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,5 +14,68 @@
   </div>
 
   <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate - Experience & Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .star { filter: blur(0.6px); }
+    @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+    .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
+  </style>
+</head>
+
+<body class="m-0 p-0 bg-gradient-to-b from-[#4B3B9B] via-[#5B4BA8] to-[#7B63C6] relative min-h-screen overflow-hidden">
+
+<!-- ✨ Stars Background -->
+<div class="absolute inset-0" id="resultContainer1">
+  <div class="w-full h-full relative">
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:7%; left:12%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:18%; left:78%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-60" style="width:2px; height:2px; top:25%; left:33%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:3px; height:3px; top:40%; left:55%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:53%; left:20%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:60%; left:85%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-60" style="width:3px; height:3px; top:68%; left:42%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:4px; height:4px; top:75%; left:10%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:2px; height:2px; top:82%; left:67%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-40" style="width:3px; height:3px; top:90%; left:30%;"></span>
+    <span class="absolute star rounded-full bg-white opacity-50" style="width:4px; height:4px; top:95%; left:80%;"></span>
+  </div>
+</div>
+
+<!-- 🏔 Hills Background -->
+<svg class="absolute bottom-0 w-full h-3/5" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path fill="#7B63C6" d="M0 350C120 280 240 320 360 280C480 240 600 300 720 260C840 220 960 280 1080 240C1200 200 1320 260 1440 230V400H0V350Z" />
+  <path fill="#3F2A7A" d="M1440 350C1320 280 1200 320 1080 280C960 240 840 300 720 260C600 220 480 280 360 240C240 200 120 260 0 230V400H1440V350Z" />
+  <path fill="#5A47A3" d="M0 459C180 369 360 429 540 369C720 309 900 399 1080 339C1260 279 1440 369 1440 369V400H0V459Z" />
+</svg>
+
+<!-- 🌟 Experience and Projects Container -->
+<div class="absolute inset-0 flex items-center justify-center p-8 animate-fadeIn overflow-auto" style="transform: scale(0.7); margin-top: 40px; max-height: 90vh;">
+  <div class="bg-white/20 backdrop-blur-2xl rounded-3xl p-8 md:p-12 w-full max-w-5xl text-white shadow-2xl border border-white/30 space-y-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-center tracking-wide">Candidate Experience & Projects</h1>
+    
+    <!-- Dynamic Experience Content -->
+    <div id="experience" class="space-y-6 mt-6">
+      <!-- Experience cards injected here -->
+    </div>
+
+    <div class="flex justify-center mt-8">
+      <button id="toQuestionsBtn" class="px-8 py-3 bg-purple-600 hover:bg-purple-700 transition-all duration-200 rounded-full text-white text-lg font-semibold shadow-lg">
+        Next ➔ Customized Questions
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 📜 Script -->
+<script src="script.js"></script>
+
 </body>
 </html>

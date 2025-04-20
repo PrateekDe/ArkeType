@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "Imagine you are working on the Findr app again.  A critical bug is discovered right before the planned launch to ASU students.  This bug prevents users from logging in.  How would you approach this situation?",
+    "answer": "Immediately inform the team and collaborate on a hotfix, even if it means delaying the launch to ensure a stable release.",
+    "responseTime": 4
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "During your internship at PwC, you discovered an anomaly in the dataset that significantly impacted the forecast accuracy. How did you approach investigating and resolving this issue?",
+    "answer": "Independently analyzed the anomaly, documented the findings, and proposed a solution to the team for review and implementation.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "While working on Resumagic, you realize that the Gemini API is experiencing unexpected downtime.  This prevents users from generating portfolio websites.  How would you handle this situation to mitigate user impact?",
+    "answer": "Temporarily disable the website generation feature until the Gemini API is restored, preventing users from encountering errors.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "ParmarthNGO",
+    "question": "During your time leading ParmarthNGO during the COVID-19 crisis, you faced unexpected logistical challenges.  A shipment of oxygen cylinders was significantly delayed. How did you react to this situation and what actions did you take?",
+    "answer": "Focused on expediting the delayed shipment through direct contact with the supplier and relevant authorities, while keeping those affected informed of the progress.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "Reflecting on your work with the WheelEasy Foundation, how did you balance the need to implement new features with the goal of maintaining a user-friendly interface for the accessibility map?",
+    "answer": "Strived for a minimalist design approach, adding only essential features to avoid overwhelming users with unnecessary complexity.",
+    "responseTime": 2
+  }
+]

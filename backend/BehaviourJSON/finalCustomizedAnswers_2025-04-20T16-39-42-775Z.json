@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Imagine you are working on the WheelEasy map again and a critical bug emerges during peak usage, preventing users from accessing accessibility information.  How do you prioritize your next steps?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "No answer"
+  },
+  {
+    "question": "During your time at PwC, you worked with a large dataset.  Reflecting on that experience, what was your most valuable learning regarding data preprocessing?",
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "selectedAnswer": "No answer"
+  },
+  {
+    "question": "In developing Resumagic, you used AWS Lambda.  Imagine the cost of Lambda functions unexpectedly skyrockets. What is your initial course of action?",
+    "basedOn": "Resumagic",
+    "selectedAnswer": "No answer"
+  },
+  {
+    "question": "During your time leading ParmarthNGO, you had to make quick decisions under pressure. Can you describe a situation where your initial plan didn't work, and how you adapted?",
+    "basedOn": "ParmarthNGO",
+    "selectedAnswer": "No answer"
+  },
+  {
+    "question": "Reflecting on the development of Findr by OpuLnt, what was the biggest challenge you encountered related to designing secure systems, and how did you overcome it?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "No answer"
+  }
+]
