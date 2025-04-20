@@ -7,11 +7,16 @@
 </head>
 <body>
   <div class="container" id="resultContainer2">
-    <h1>Customized Behavioral Questions</h1>
-    <div id="questions"></div>
+    <h1>Customized Questions</h1>
 
-    <!-- ✅ Add this button to go to Behavioral Assessment -->
-    <button id="toBehaviorBtn" class="primary-button" style="margin-top: 30px;">Next ➔ Behavioral Assessment</button>
+    <!-- ✅ Wrap questions inside a form -->
+    <form id="questionsForm">
+      <div id="questions"></div>
+
+      <button type="submit" id="submitAnswersBtn" class="primary-button" style="margin-top: 30px;">Next ➔ Behavioral Assessment</button>
+    </form>
+
+    <!-- <button type="button" id="toBehaviorBtn" class="secondary-button" style="margin-top: 20px;">Next ➔ Behavioral Assessment</button> -->
   </div>
 
   <script src="script.js"></script>

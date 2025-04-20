@@ -19,6 +19,26 @@ app.use(express.static('frontend'));
 app.use('/uploads', express.static('uploads'));
 app.use('/outputs', express.static('outputs'));
 
+
+app.post('/save-customized-json', (req, res) => {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', () => {
+    try {
+      const parsed = JSON.parse(body);
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const fileName = `backend/BehaviourJSON/finalCustomizedAnswers_${timestamp}.json`;
+
+      fs.writeFileSync(fileName, JSON.stringify(parsed, null, 2)); 
+      res.json({ success: true, file: fileName });
+    } catch (err) {
+      console.error('❌ Customized JSON Save Error:', err.message);
+      res.status(500).json({ success: false, error: 'Invalid JSON format' });
+    }
+  });
+});
+
+
 app.post('/analyze-behavior', async (req, res) => {
   try {
     let body = '';
