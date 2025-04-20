@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Parapersona</title>
   <style>
     body {
@@ -74,48 +75,10 @@
       color: white;
     }
   </style>
+</head>
 <body>
-
   <h1>WELCOME TO<br />PARAPERSONA</h1>
-  <button id="candidateBtn"  class="button signup">CANDIDATE</button>
-  <button id="recruiterBtn"  class="button signin">RECRUITER</button>
-  
-  <!-- <div class="container login-page">
-    <h1>Welcome to <span class="highlight">Parapersona</span></h1>
-    <p>Who are you?</p>
-    <div class="login-buttons">
-      <button id="candidateBtn" style="margin-right: 100px;" class="primary-button">Login as Candidate</button>
-      <button id="recruiterBtn" class="primary-button">Login as Recruiter</button>
-    </div>
-  </div> -->
-
-  <script>
-    // Candidate login
-    document.getElementById('candidateBtn').addEventListener('click', () => {
-      sessionStorage.setItem('userType', 'candidate');
-      window.location.href = 'index.html';
-    });
-
-    // Recruiter login
-    document.getElementById('recruiterBtn').addEventListener('click', async () => {
-      sessionStorage.setItem('userType', 'recruiter');
-
-      try {
-        // Try fetching finalReport.json
-        const response = await fetch('/report');
-
-        if (response.ok) {
-          // ✅ File exists, proceed
-          window.location.href = 'result.html';
-        } else {
-          // ❌ File not found
-          alert('There is no report from any candidate. Please upload a resume first as a candidate.');
-        }
-      } catch (error) {
-        console.error('Error checking report:', error);
-        alert('Server error. Try again later.');
-      }
-    });
-  </script>
+  <button class="button signup">Sign up</button>
+  <button class="button signin">Sign in</button>
 </body>
 </html>
