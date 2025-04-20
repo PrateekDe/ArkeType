@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Behavioral Assessment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="behaviorContainer">
+    <h1>Behavioral Assessment</h1>
+    <div id="questionBox"></div>
+    <button id="nextBtn" class="primary-button" disabled>Submit Answers</button>
+  </div>
+
+  <script>
+    let questions = [];
+    const answers = [];
+    let currentIndex = 0;
+    let startTime = null;
+
+    const questionBox = document.getElementById('questionBox');
+    const nextBtn = document.getElementById('nextBtn');
+
+    async function fetchQuestions() {
+      try {
+        const res = await fetch('/report');
+        const data = await res.json();
+        questions = data.customizedQuestions.questions.slice(0, 5); // force only 5 questions
+        console.log('Loaded questions:', questions);
+        renderQuestion(currentIndex);
+      } catch (err) {
+        console.error('Failed to load questions:', err);
+        questionBox.innerHTML = '<p>Error loading questions. Try again later.</p>';
+      }
+    }
+
+    function renderQuestion(index) {
+      startTime = Date.now();
+      const q = questions[index];
+      questionBox.innerHTML = `
+        <h2>Question ${index + 1} of ${questions.length}</h2>
+        <p><strong>Based on:</strong> ${q.basedOn}</p>
+        <p>${q.question}</p>
+        <form id="mcqForm">
+          ${q.options.map((opt) => `
+            <label>
+              <input type="radio" name="option" value="${opt}"> ${opt}
+            </label><br>`).join('')}
+        </form>
+      `;
+
+      document.querySelectorAll('input[name="option"]').forEach((input) => {
+        input.addEventListener('change', () => {
+          nextBtn.disabled = false;
+        });
+      });
+      nextBtn.disabled = true;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      const endTime = Date.now();
+      const timeTaken = Math.round((endTime - startTime) / 1000);
+      const selected = document.querySelector('input[name="option"]:checked');
+      const answer = selected ? selected.value : "";
+
+      answers.push({
+        basedOn: questions[currentIndex].basedOn,
+        question: questions[currentIndex].question,
+        answer,
+        responseTime: timeTaken
+      });
+
+      currentIndex++;
+      if (currentIndex < questions.length) {
+        renderQuestion(currentIndex);
+      } else {
+        submitAnswers();
+      }
+    });
+
+    function submitAnswers() {
+      fetch('/analyze-behavior', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(answers)
+      })
+      .then(() => {
+        // ✅ Save locally to ArkeType/backend/finalBehaviorAnswers.json
+        return fetch('/save-behavior-json', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(answers)
+        });
+      })
+      .then(() => {
+        window.location.href = 'result.html';
+      })
+      .catch(err => {
+        console.error('Behavior submission failed:', err);
+        alert('Something went wrong. Try again.');
+      });
+    }
+
+    fetchQuestions();
+  </script>
+</body>
+</html>

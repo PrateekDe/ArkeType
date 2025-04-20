@@ -7,8 +7,8 @@
         "Location": "Sydney, Australia (Online)",
         "Dates": "Dec 2024 – present",
         "Responsibilities": [
-          "Improved the functionality of an interactive accessibility map, ensuring it meets user needs for identifying accessible destinations easily.",
-          "Optimized zoom-in and sidebar navigation features for seamless exploration of detailed location information."
+          "Improved the functionality of an interactive accessibility map",
+          "Optimized zoom-in and sidebar navigation features"
         ]
       },
       {
@@ -17,9 +17,9 @@
         "Location": "Tempe, AZ",
         "Dates": "Dec 2024 – present",
         "Responsibilities": [
-          "Designed and implemented a robust backend system using Python, enabling real-time emotion analysis and 10-day trend prediction with AI models (LSTM/Transformers).",
-          "Built secure and scalable RESTful APIs with Flask/FastAPI to ensure seamless communication between the Flutter-based app and the cloud-hosted backend.",
-          "Focused on user privacy and data security by integrating encryption protocols and adaptive learning, enhancing the app’s ability to provide tailored insights for emotional well-being."
+          "Designed and implemented a robust backend system using Python",
+          "Built secure and scalable RESTful APIs with Flask/FastAPI",
+          "Focused on user privacy and data security by integrating encryption protocols and adaptive learning"
         ]
       },
       {
@@ -28,9 +28,9 @@
         "Location": "Bengaluru, IN",
         "Dates": "May 2024 - Aug 2024",
         "Responsibilities": [
-          "Enhanced the LightGBM algorithm with custom loss functions and feature engineering, improving its ability to capture seasonal trends and promotional impacts.",
-          "Developed robust preprocessing methods to clean and manage a sample dataset of 60,000 rows, addressing missing data and outliers to establish a baseline accuracy of 70%.",
-          "Designed and fine-tuned an ensemble forecasting system combining SARIMA, LightGBM, and Transformers, increasing accuracy to approximately 90% on the sample dataset by optimizing parameters and leveraging advanced feature selection."
+          "Enhanced the LightGBM algorithm with custom loss functions and feature engineering",
+          "Developed robust preprocessing methods to clean and manage a sample dataset",
+          "Designed and fine-tuned an ensemble forecasting system combining SARIMA, LightGBM, and Transformers"
         ]
       },
       {
@@ -39,9 +39,9 @@
         "Location": "Tempe, AZ",
         "Dates": "March 2024 – Nov 2024",
         "Responsibilities": [
-          "Researching and planning backend architecture for a Dynamic Course Recommender app, exploring Python frameworks and database solutions to build a scalable system.",
-          "Investigating machine learning libraries such as sci-kit-learn and TensorFlow to develop personalized course recommendation algorithms based on student data and academic trends.",
-          "Evaluating web scraping tools like BeautifulSoup and natural language processing libraries for gathering and analyzing course information from online sources, including Reddit."
+          "Researching and planning backend architecture for a Dynamic Course Recommender app",
+          "Investigating machine learning libraries such as sci-kit-learn and TensorFlow to develop personalized course recommendation algorithms",
+          "Evaluating web scraping tools like BeautifulSoup and natural language processing libraries for gathering and analyzing course information"
         ]
       },
       {
@@ -50,8 +50,8 @@
         "Location": "Tempe, Az",
         "Dates": "Dec 2023 – Feb 2024",
         "Responsibilities": [
-          "Planned and designed an intuitive interface using vanilla JavaScript, focusing on usability and aesthetic appeal from scratch.",
-          "Implemented features and interactions to elevate the overall user experience and ensure seamless visual design."
+          "Planned and designed an intuitive interface using vanilla JavaScript",
+          "Implemented features and interactions to elevate the overall user experience"
         ]
       },
       {
@@ -60,7 +60,8 @@
         "Location": "Bengaluru, IN",
         "Dates": "May 2021 – Aug 2021",
         "Responsibilities": [
-          "Led a team of 200 in a startup initiative involving 1000 people during the second wave of COVID-19 in India, coordinating efforts with contractors to secure oxygen cylinders and essential supplies, ensuring stock availability, and saving thousands of lives through strategic planning and efficient record management."
+          "Led a team of 200 in a startup initiative involving 1000 people during the second wave of COVID-19 in India",
+          "Coordinated efforts with contractors to secure oxygen cylinders and essential supplies"
         ]
       }
     ],
@@ -70,9 +71,9 @@
         "Description": "Simple RAG-Based App",
         "Date": "Apr 2025",
         "Details": [
-          "Developed a lightweight document-based QA tool that achieved 92 percent accuracy on user-generated queries by combining semantic search with GPT-3.5 completions.",
-          "Processed and chunked PDFs into over 1,000 context windows using SentenceTransformers; top-3 vector matches boosted response relevance by 38 percent over vanilla prompting.",
-          "Delivered real-time answers (¡2s latency on average) through a local Streamlit UI, enabling offline AI assistance for research, documentation, and classroom material."
+          "Developed a lightweight document-based QA tool",
+          "Processed and chunked PDFs into over 1,000 context windows using SentenceTransformers",
+          "Delivered real-time answers through a local Streamlit UI"
         ]
       },
       {
@@ -80,9 +81,9 @@
         "Description": "AI-Powered Web Tool",
         "Date": "Apr 2025",
         "Details": [
-          "Built a client-side AI tool leveraging Gemini API and PDF.js to convert resumes into responsive portfolio websites, enabling real-time generation with a privacy-first architecture.",
-          "Integrated AWS Lambda for secure Gemini API interactions and implemented usage throttling via localStorage, ensuring on-device data privacy and scalable function execution.",
-          "Deployed the frontend via Amazon S3 and CloudFront for fast global access, eliminating the need for traditional servers and enabling seamless GitHub Pages fallback."
+          "Built a client-side AI tool leveraging Gemini API and PDF.js to convert resumes into responsive portfolio websites",
+          "Integrated AWS Lambda for secure Gemini API interactions",
+          "Deployed the frontend via Amazon S3 and CloudFront"
         ]
       },
       {
@@ -90,8 +91,8 @@
         "Role": "Full Stack Developer",
         "Date": "Dec 2024",
         "Details": [
-          "Collaborated with a team of four to develop a lost-and-found app for ASU students, focusing on backend development to ensure seamless functionality. Designed secure systems for interactive item listings and direct messaging, making it easier for students to reconnect with their belongings.",
-          "Addressed campus-wide challenges by creating a user-friendly platform with minimal registration requirements. Targeting completion by December 2024, with plans to present it as an official ASU digital service."
+          "Collaborated with a team of four to develop a lost-and-found app for ASU students",
+          "Designed secure systems for interactive item listings and direct messaging"
         ]
       },
       {
@@ -99,9 +100,9 @@
         "Description": "iOS Application",
         "Date": "Apr 2024",
         "Details": [
-          "Developed an iOS app that allows users to search for events based on pincode and distance preferences, featuring a user-friendly interface with event cards, interactive map view, and search history.",
-          "Integrated with Ticketmaster Discovery API to fetch event data, including details, price ranges, seatmaps, and ticket URLs, and utilized CoreLocation to display event locations on the map view.",
-          "Implemented expandable event cards, Apple Maps integration for directions, and employed SwiftUI, CoreData, and MVVM architecture to create a responsive, visually appealing, and maintainable app."
+          "Developed an iOS app that allows users to search for events",
+          "Integrated with Ticketmaster Discovery API to fetch event data",
+          "Utilized CoreLocation to display event locations"
         ]
       },
       {
@@ -109,8 +110,8 @@
         "Description": "Your Personal Mental Health Companion",
         "Date": "Dec 2023",
         "Details": [
-          "Developed a full-stack web app focused on mental well-being, incorporating features like daily motivation and therapeutic journaling to provide meaningful user support.",
-          "Designed secure systems to ensure robust data privacy, aligning the app with the increasing focus on mental health awareness and user trust."
+          "Developed a full-stack web app focused on mental well-being",
+          "Designed secure systems to ensure robust data privacy"
         ]
       },
       {
@@ -118,9 +119,8 @@
         "Description": "Blue Star Mothers (Hackathon)",
         "Date": "Oct 2023",
         "Details": [
-          "Led the implementation of a website feature featuring an OTP password generator login system for package sending to armed forces families.",
-          "Orchestrated the complete back-end development for the full-stack project, ensuring seamless functionality and integration.",
-          "Played a key role in constructing specific sections of the database and applied the 6-Sigma (DMAIC) concept to enhance product development, refine problem definition, and create efficient solutions."
+          "Led the implementation of a website feature featuring an OTP password generator login system",
+          "Orchestrated the complete back-end development for the full-stack project"
         ]
       }
     ],
@@ -129,34 +129,68 @@
   "customizedQuestions": {
     "questions": [
       {
-        "question": "Imagine you're working on the WheelEasy map again and a user reports that the zoom functionality is slow and jerky on their older phone. How would you approach this issue?",
-        "basedOn": "WheelEasy Foundation",
-        "options": [
-          "Immediately start rewriting the zoom logic with a different library known for performance.",
-          "First, try to reproduce the issue on a similar device. If successful, investigate performance bottlenecks using profiling tools and then optimize the existing code.",
-          "Suggest the user upgrade their phone, as the map is designed for modern devices.",
-          "Gather more information from the user about their phone model, OS version, and network conditions before deciding on a course of action."
-        ]
-      },
-      {
-        "question": "During the development of MindScribe, you realized that the initial choice of AI model wasn't delivering the desired accuracy for emotion prediction.  How would you handle this situation?",
-        "basedOn": "MindScribe",
-        "options": [
-          "Stick with the current model but adjust the prediction thresholds to create the illusion of better accuracy.",
-          "Immediately switch to the latest and most hyped AI model, assuming it will solve the problem.",
-          "Systematically evaluate alternative models (like BERT or GPT variants) on a held-out dataset, considering performance, computational cost, and ease of integration.",
-          "Inform users that accurate emotion prediction is inherently difficult and reduce the prominence of this feature in the app."
-        ]
-      },
-      {
-        "question": "Reflecting on your experience at PwC, you encounter a forecasting problem where the data exhibits a strong cyclical pattern but also significant noise.  Which approach would you prioritize?",
+        "question": "During your time at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant improvement in model performance during testing, but it relied on a complex and difficult-to-explain technique.  How would you approach presenting this to your team and stakeholders?",
         "basedOn": "PricewaterhouseCoopers (PwC)",
         "options": [
-          "Focus solely on a complex deep learning model, believing it can automatically learn any pattern.",
-          "Begin with a simpler model like SARIMA to capture the cyclical component and then explore adding noise-reducing techniques or ensemble methods if needed.",
-          "Manually remove the noise from the data before applying any model, ensuring perfect input data.",
-          "Choose the model that performed best on the previous forecasting project, regardless of the data characteristics."
+          "Present the improvement and the complex technique as is, emphasizing the performance gains and offering to deep-dive into the technical details upon request.",
+          "Simplify the explanation of the technique, potentially omitting some details, to make it more accessible to a broader audience, focusing on the positive results.",
+          "Hold off on presenting the findings until you can develop a simpler, more easily understandable approach that achieves similar performance gains.",
+          "Present the improvement and acknowledge the complexity of the technique, recommending further investigation and collaboration to validate and simplify it."
         ]
+      },
+      {
+        "question": "While working on Resumagic, you integrated AWS Lambda for secure Gemini API interactions.  If you faced unexpected latency issues with Lambda affecting the user experience, what steps would you take to diagnose and resolve the problem?",
+        "basedOn": "Resumagic",
+        "options": [
+          "Immediately roll back the Lambda integration to a previous stable version and investigate the issue offline.",
+          "Implement detailed logging and monitoring within the Lambda function to pinpoint the source of the latency.",
+          "Consult AWS documentation and online forums for similar reported issues and try suggested solutions.",
+          "Reach out to AWS support for immediate assistance while simultaneously investigating the issue internally."
+        ]
+      },
+      {
+        "question": "Reflecting on your experience leading a team at ParmarthNGO during the COVID-19 crisis, describe a time you had to make a critical decision with limited information and resources. What was the situation, and how did you approach making that decision?",
+        "basedOn": "ParmarthNGO",
+        "options": [
+          "Gather all available information quickly, even if incomplete, consult with the team on potential solutions, and choose the option with the highest potential benefit, accepting the inherent risks.",
+          "Prioritize the most urgent needs, focusing on immediate impact and delegating tasks to team members with relevant expertise, adjusting the plan as more information becomes available.",
+          "Seek guidance from experienced individuals outside the immediate team who might have encountered similar challenges, leveraging their knowledge to inform the decision-making process.",
+          "Focus on maintaining open communication and transparency with the team and stakeholders about the limited resources and evolving situation, making collaborative decisions based on the best available data."
+        ]
+      }
+    ]
+  },
+  "behavioralAnalysis": {
+    "analysis": [
+      {
+        "category": "Technical Communication & Simplification",
+        "tags": [
+          "Results-Oriented",
+          "Communication",
+          "Pragmatic"
+        ],
+        "authenticityScore": 0.9
+      },
+      {
+        "category": "Problem-Solving & Technical Proficiency",
+        "tags": [
+          "Technical",
+          "Problem-Solver",
+          "AWS",
+          "API"
+        ],
+        "authenticityScore": 0.95
+      },
+      {
+        "category": "Decision-Making & Leadership",
+        "tags": [
+          "Leadership",
+          "Decision-Making",
+          "Prioritization",
+          "Delegation",
+          "Adaptability"
+        ],
+        "authenticityScore": 0.92
       }
     ]
   }

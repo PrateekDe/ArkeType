@@ -124,4 +124,12 @@ if (document.getElementById('resultContainer2')) {
     .catch(err => {
       console.error('Error fetching report:', err);
     });
+
+    // Navigate to Behavioral Assessment page
+const toBehaviorBtn = document.getElementById('toBehaviorBtn');
+if (toBehaviorBtn) {
+  toBehaviorBtn.addEventListener('click', () => {
+    window.location.href = 'behavior.html';
+  });
+}
 }

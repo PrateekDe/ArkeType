@@ -5,9 +5,13 @@ import fs from 'fs';
 import path from 'path';
 import { extractResumeExperience, generateCustomQuestions } from './gemini/test.js';
 import pkg from 'pdfjs-dist';  // ✅ EXACT like your working runParse.js
+
+import { analyzeBehaviorResponses } from './gemini/behaviorAnalysis.js';
+
 const { getDocument } = pkg;
 
-const app = express();
+const app = express(); // ✅ Moved up to be defined before any use
+
 const port = 3000;
 
 app.use(cors());
@@ -15,7 +19,47 @@ app.use(express.static('frontend'));
 app.use('/uploads', express.static('uploads'));
 app.use('/outputs', express.static('outputs'));
 
-const upload = multer({ dest: 'backend/uploads/' });
+app.post('/analyze-behavior', async (req, res) => {
+  try {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', async () => {
+      const responses = JSON.parse(body);
+      const analysis = await analyzeBehaviorResponses(responses);
+
+      // Write to final report JSON
+      const reportPath = 'backend/outputs/finalReport.json';
+      const existing = JSON.parse(fs.readFileSync(reportPath));
+      existing.behavioralAnalysis = analysis;
+      fs.writeFileSync(reportPath, JSON.stringify(existing, null, 2));
+
+      res.json({ success: true });
+    });
+  } catch (err) {
+    console.error('Behavior Analysis Error:', err.message);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/save-behavior-json', (req, res) => {
+  let body = '';
+  req.on('data', chunk => body += chunk);
+  req.on('end', () => {
+    try {
+      const parsed = JSON.parse(body);  // ✅ ensure valid JSON first
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const fileName = `backend/BehaviourJSON/finalBehaviorAnswers_${timestamp}.json`;
+
+      fs.writeFileSync(fileName, JSON.stringify(parsed, null, 2));  // ✅ clean JSON
+      res.json({ success: true, file: fileName });
+    } catch (err) {
+      console.error('❌ JSON Save Error:', err.message);
+      res.status(500).json({ success: false, error: 'Invalid JSON format' });
+    }
+  });
+});
+
+const upload = multer({ dest: 'backend/BehaviourJSON/' });
 
 app.post('/upload', upload.single('resume'), async (req, res) => {
     try {

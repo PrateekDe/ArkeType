@@ -1,0 +1,20 @@
+[
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "During your time at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant improvement in model performance during testing, but it relied on a complex and difficult-to-explain technique.  How would you approach presenting this to your team and stakeholders?",
+    "answer": "Simplify the explanation of the technique, potentially omitting some details, to make it more accessible to a broader audience, focusing on the positive results.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "While working on Resumagic, you integrated AWS Lambda for secure Gemini API interactions.  If you faced unexpected latency issues with Lambda affecting the user experience, what steps would you take to diagnose and resolve the problem?",
+    "answer": "Implement detailed logging and monitoring within the Lambda function to pinpoint the source of the latency.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "ParmarthNGO",
+    "question": "Reflecting on your experience leading a team at ParmarthNGO during the COVID-19 crisis, describe a time you had to make a critical decision with limited information and resources. What was the situation, and how did you approach making that decision?",
+    "answer": "Prioritize the most urgent needs, focusing on immediate impact and delegating tasks to team members with relevant expertise, adjusting the plan as more information becomes available.",
+    "responseTime": 1
+  }
+]
