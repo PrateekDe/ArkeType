@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Imagine you're working on the WheelEasy map again and a critical bug emerges that prevents users from zooming in properly.  How would you approach diagnosing and resolving the issue?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "Check online forums and documentation for similar issues, then apply suggested solutions."
+  },
+  {
+    "question": "During your time leading ParmarthNGO's COVID-19 relief efforts, you had to coordinate with numerous contractors for essential supplies.  How did you ensure accountability and transparency in this high-pressure environment?",
+    "basedOn": "ParmarthNGO",
+    "selectedAnswer": "Relied heavily on personal relationships with contractors, trusting their judgment and delivery."
+  },
+  {
+    "question": "While building Resumagic, you chose to integrate AWS Lambda for handling Gemini API interactions.  If you could go back, what's one alternative approach you might consider and why?",
+    "basedOn": "Resumagic",
+    "selectedAnswer": "Handle API interactions directly within the client-side code for simplified architecture."
+  },
+  {
+    "question": "Reflecting on your work on Findr by OpuLnt, you designed secure systems for item listings and messaging. If faced with a similar challenge today, what additional security measures would you implement?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Implement multi-factor authentication for all user accounts."
+  },
+  {
+    "question": "You used SentenceTransformers to process PDFs for DocuQuery. Imagine a scenario where the processing time becomes unacceptably long due to an increase in document size. What optimization strategies would you explore?",
+    "basedOn": "DocuQuery",
+    "selectedAnswer": "Switch to a more powerful embedding model like OpenAI's embeddings API."
+  }
+]

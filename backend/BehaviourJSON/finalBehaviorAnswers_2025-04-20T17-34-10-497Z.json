@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "Imagine you're working on the WheelEasy map again and a critical bug emerges that prevents users from zooming in properly.  How would you approach diagnosing and resolving the issue?",
+    "answer": "Systematically test different parts of the zoom functionality to isolate the problem, then debug and fix.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "ParmarthNGO",
+    "question": "During your time leading ParmarthNGO's COVID-19 relief efforts, you had to coordinate with numerous contractors for essential supplies.  How did you ensure accountability and transparency in this high-pressure environment?",
+    "answer": "Implemented a rigorous tracking system to document every transaction and maintain a clear audit trail.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "While building Resumagic, you chose to integrate AWS Lambda for handling Gemini API interactions.  If you could go back, what's one alternative approach you might consider and why?",
+    "answer": "Explore using a containerized solution like Docker for improved scalability and portability.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "Reflecting on your work on Findr by OpuLnt, you designed secure systems for item listings and messaging. If faced with a similar challenge today, what additional security measures would you implement?",
+    "answer": "Focus on enhancing data encryption methods to protect sensitive information.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "DocuQuery",
+    "question": "You used SentenceTransformers to process PDFs for DocuQuery. Imagine a scenario where the processing time becomes unacceptably long due to an increase in document size. What optimization strategies would you explore?",
+    "answer": "Investigate alternative document processing libraries with better performance.",
+    "responseTime": 1
+  }
+]

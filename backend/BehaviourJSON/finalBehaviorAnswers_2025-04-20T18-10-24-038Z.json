@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "Imagine you're working on improving the accessibility map at WheelEasy. You discover a critical bug affecting zoom functionality just hours before a major presentation. How do you prioritize and address the situation?",
+    "answer": "Inform the stakeholders about the bug and suggest postponing the presentation.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "MindScribe",
+    "question": "While developing the real-time emotion analysis system for MindScribe, you encounter unexpected fluctuations in accuracy.  How do you approach identifying the root cause?",
+    "answer": "Consult research papers and online forums for similar issues and solutions.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "During your internship at PwC, the team decides to switch from LightGBM to XGBoost. How do you adapt to this change?",
+    "answer": "Seek guidance from senior team members experienced with XGBoost implementation.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "ParmarthNGO",
+    "question": "While leading the team at ParmarthNGO, you faced conflicting demands for limited resources (oxygen cylinders). How did you navigate this challenge?",
+    "answer": "Collaborated with other organizations to pool resources and expand availability.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "During the development of Resumagic, you realized the initial choice of PDF parsing library was significantly slowing down performance. How do you handle this setback?",
+    "answer": "Optimize the existing library's usage by identifying and addressing specific bottlenecks.",
+    "responseTime": 2
+  }
+]

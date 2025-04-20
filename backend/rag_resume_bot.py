@@ -125,4 +125,20 @@ def main():
     print(f"{Fore.GREEN}✅ Resume successfully processed!")
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) == 3:
+        resume_path = sys.argv[1]
+        question = sys.argv[2]
+
+        bot = ResumeRAGBot()
+        bot.process_resume(resume_path)
+
+        result = bot.answer_question(question)
+        top_chunks = result['top_chunks']
+
+        if not top_chunks:
+            print("No relevant information found in the resume.")
+        else:
+            print(top_chunks[0]['text'])  # ✅ Just print the top answer
+    else:
+        print("Usage: python rag_resume_bot.py <resume_path> <question>")
+

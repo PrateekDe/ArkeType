@@ -1,0 +1,27 @@
+[
+  {
+    "question": "During your internship at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant bug in your implementation that negatively impacted the model's performance just hours before a critical presentation. How would you handle this situation?",
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "selectedAnswer": "Present the flawed results, downplaying the impact of the bug, and hope it goes unnoticed during the presentation."
+  },
+  {
+    "question": "While working on Findr by OpuLnt, how did you approach collaborating with your team to design the secure systems for item listings and messaging?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Followed established security protocols and best practices without much discussion within the team."
+  },
+  {
+    "question": "In your role at WheelEasy Foundation, you improved the map's zoom and navigation.  A user reports that these changes have made the map less accessible for users with certain disabilities. How do you respond?",
+    "basedOn": "WheelEasy Foundation - Frontend and Backend developer Intern",
+    "selectedAnswer": "Thank the user for their feedback, investigate the issue, and prioritize finding a solution that accommodates their needs."
+  },
+  {
+    "question": "Reflecting on your experience leading a team of 200 volunteers at ParmarthNGO during a crisis, what was the most challenging aspect of coordinating efforts with contractors for essential supplies?",
+    "basedOn": "ParmarthNGO - City Lead",
+    "selectedAnswer": "Managing the logistics of procuring and distributing supplies across a large network of volunteers."
+  },
+  {
+    "question": "During the development of Resumagic, you had to integrate AWS Lambda for secure API interactions.  Imagine the Lambda function started experiencing unexpected latency issues, affecting the user experience. How would you approach debugging and resolving this?",
+    "basedOn": "Resumagic - AI-Powered Web Tool",
+    "selectedAnswer": "Implement additional logging and monitoring to identify the root cause of the latency and then apply targeted fixes."
+  }
+]

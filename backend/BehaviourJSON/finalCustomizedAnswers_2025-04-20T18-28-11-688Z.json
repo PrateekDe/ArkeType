@@ -1,0 +1,27 @@
+[
+  {
+    "question": "During your time at WheelEasy Foundation, you worked on improving the accessibility map. Imagine a user reports a critical bug that prevents screen readers from accessing key information. How would you prioritize and address this issue?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "Gather more information from the user about their specific screen reader and browsing environment before taking action."
+  },
+  {
+    "question": "While developing MindScribe, you focused on user privacy and data security. Let's say a user expresses concerns about the security of their data. How would you reassure them and demonstrate your commitment to data protection?",
+    "basedOn": "MindScribe",
+    "selectedAnswer": "Share testimonials from other satisfied users regarding the platform's security and reliability."
+  },
+  {
+    "question": "Reflecting on your PwC internship, imagine your optimized LightGBM model unexpectedly performs poorly on a new dataset. How would you approach diagnosing and resolving this issue?",
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "selectedAnswer": "Revert to the original LightGBM model and abandon the optimizations."
+  },
+  {
+    "question": "In your role as Founder and Full Stack Developer at OpuLnt Technology, you researched different technologies.  If you discovered a promising new library that could significantly improve the performance of Findr, but requires a substantial rewrite of existing code, how would you proceed?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Immediately implement the new library, prioritizing performance gains over potential disruptions."
+  },
+  {
+    "question": "Thinking back to your work on ThriveSpace, imagine a security vulnerability is discovered in the user authentication system after the app has been launched. How would you manage this situation and communicate with your users?",
+    "basedOn": "ThriveSpace",
+    "selectedAnswer": "Downplay the severity of the vulnerability to avoid causing panic among users."
+  }
+]

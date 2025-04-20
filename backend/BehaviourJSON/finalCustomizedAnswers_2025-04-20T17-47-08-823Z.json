@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Imagine you're onboarding a new team member to a complex project involving AWS services like Lambda, DynamoDB, and S3.  The documentation you previously created is slightly outdated. How do you approach this situation?",
+    "basedOn": "Software Development Engineer Intern - Amazon",
+    "selectedAnswer": "Quickly update the documentation before the new member arrives, even if it means staying late."
+  },
+  {
+    "question": "During your research on online child exploitation, you discovered a new pattern of abusive behavior. Your team is divided on how to proceed. Some want to publish the findings immediately, while others believe more research is necessary. How do you handle this disagreement?",
+    "basedOn": "Junior Researcher - Somaiya Vidyavihar, IN & Children’s Investment Fund Foundation (CIFF), U.K.",
+    "selectedAnswer": "Call a team meeting to discuss the different perspectives and come to a consensus on the best course of action."
+  },
+  {
+    "question": "You are presenting your 'Automating LLM-Assisted Tuning for LSM-KVS' project to a non-technical audience.  How do you explain the core concept and its value?",
+    "basedOn": "Automating LLM-Assisted Tuning for LSM-KVS",
+    "selectedAnswer": "Use technical terms to maintain accuracy and demonstrate expertise."
+  },
+  {
+    "question": "While working on 'Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations', you encountered an unexpected performance bottleneck.  How do you approach debugging this issue?",
+    "basedOn": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
+    "selectedAnswer": "Immediately start refactoring the codebase, assuming the issue lies in the initial design."
+  },
+  {
+    "question": "During the 'Hackathon by SVB & ASU', your team faced a critical bug just hours before the deadline. How did you and your team react under pressure?",
+    "basedOn": "Hackathon by SVB & ASU",
+    "selectedAnswer": "Collaboratively prioritized the bug fix and divided the work based on each member's strengths."
+  }
+]

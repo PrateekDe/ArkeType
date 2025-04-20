@@ -1,0 +1,27 @@
+[
+  {
+    "question": "During your time at WheelEasy Foundation, you worked on improving the accessibility map. Imagine a user reports a newly added feature is causing the map to load slowly on mobile devices. How would you approach this issue?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "Investigate the issue by checking performance metrics, user device information, and network conditions, then propose potential solutions."
+  },
+  {
+    "question": "In your role at MindScribe, you mention focusing on user privacy and data security.  Imagine a vulnerability in your encryption protocol is discovered. How do you prioritize your actions?",
+    "basedOn": "MindScribe",
+    "selectedAnswer": "Quietly patch the vulnerability and monitor for any suspicious activity without informing users to avoid panic."
+  },
+  {
+    "question": "While working on DocuQuery, you processed PDFs into over 1,000 context windows. If the volume of documents suddenly increased tenfold, exceeding your current processing capacity, what would be your strategy to handle this increased load?",
+    "basedOn": "DocuQuery",
+    "selectedAnswer": "Implement a queuing system and process the documents in batches."
+  },
+  {
+    "question": "Reflecting on your experience leading the COVID-19 relief efforts with ParmarthNGO, describe a time when you had to make a difficult decision with limited information. How did you approach the situation?",
+    "basedOn": "ParmarthNGO",
+    "selectedAnswer": "Gathered as much information as possible in a short timeframe and made the best judgment call based on the available data."
+  },
+  {
+    "question": "In your Findr by OpuLnt project, you designed secure systems for item listings and messaging. Imagine a user reports receiving inappropriate messages within the app. How would you address this issue while maintaining user privacy?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Immediately ban the user accused of sending inappropriate messages."
+  }
+]

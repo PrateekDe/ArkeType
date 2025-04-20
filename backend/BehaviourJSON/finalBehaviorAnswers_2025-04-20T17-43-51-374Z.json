@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "question": "During your internship at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant bug in your implementation just hours before a crucial presentation. How would you approach this situation?",
+    "answer": "Immediately inform the team and stakeholders about the bug, and propose postponing the presentation to allow time for a fix.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Findr by OpuLnt - Full Stack Developer",
+    "question": "While working on Findr by OpuLnt, how did you balance the need for secure systems with the desire for a user-friendly experience for ASU students?",
+    "answer": "Sought a balanced approach, implementing robust security measures while streamlining the user interface for intuitive navigation and interaction.",
+    "responseTime": 3
+  },
+  {
+    "basedOn": "ParmarthNGO - City Lead",
+    "question": "As City Lead for ParmarthNGO during the COVID-19 crisis, you coordinated efforts with contractors for essential supplies.  If a contractor failed to deliver a critical shipment on time, what steps would you take?",
+    "answer": "Contact the contractor to understand the reason for the delay and explore alternative solutions, such as identifying backup suppliers.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "WheelEasy Foundation - Frontend and Backend developer Intern",
+    "question": "In your role at WheelEasy Foundation, you improved the functionality of an interactive accessibility map.  If a user reported a critical accessibility issue not reflected on the map, how would you respond?",
+    "answer": "Thank the user for their contribution and immediately investigate the reported issue, implementing a fix as quickly as possible.",
+    "responseTime": 3
+  },
+  {
+    "basedOn": "Resumagic - AI-Powered Web Tool",
+    "question": "Reflecting on your experience developing Resumagic, imagine a user reported that the generated portfolio website failed to render correctly on certain mobile devices. What would be your first step in troubleshooting this issue?",
+    "answer": "Consult online forums and communities for similar reported issues and potential solutions related to mobile rendering.",
+    "responseTime": 2
+  }
+]

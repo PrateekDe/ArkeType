@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Imagine you are working on the Findr by OpuLnt app and a critical bug is discovered just before the planned presentation to ASU. How would you prioritize addressing this issue while ensuring the presentation proceeds smoothly?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Acknowledge the bug during the presentation and explain the steps being taken to resolve it, focusing on the app’s other functionalities."
+  },
+  {
+    "question": "During your internship at PwC, you discovered a significant data anomaly that impacted the accuracy of your forecasting model. How would you approach this situation?",
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "selectedAnswer": "Immediately inform your supervisor and seek guidance on the best course of action, highlighting the potential impact on the project timeline."
+  },
+  {
+    "question": "Reflecting on your experience leading ParmarthNGO during the COVID-19 crisis, what was your most effective strategy for coordinating a large team under pressure and ensuring the efficient delivery of essential supplies?",
+    "basedOn": "ParmarthNGO - City Lead",
+    "selectedAnswer": "Establishing clear communication channels and protocols to keep the team informed and aligned on the evolving situation."
+  },
+  {
+    "question": "While developing Resumagic, you received feedback from users expressing concerns about data privacy. How would you address these concerns and maintain user trust?",
+    "basedOn": "Resumagic",
+    "selectedAnswer": "Publicly address the concerns through a blog post or social media update, emphasizing the tool's privacy-first architecture and data handling practices."
+  },
+  {
+    "question": "During the development of EventFinder, you encountered unexpected difficulties integrating the Ticketmaster Discovery API. How would you approach troubleshooting this issue and ensuring timely project completion?",
+    "basedOn": "EventFinder",
+    "selectedAnswer": "Reach out to the Ticketmaster support team directly for assistance, providing detailed information about the integration issue and the steps taken to resolve it."
+  }
+]

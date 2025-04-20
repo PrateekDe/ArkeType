@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "Imagine you are working on the Findr by OpuLnt app and a critical bug is discovered just before the planned presentation to ASU. How would you prioritize addressing this issue while ensuring the presentation proceeds smoothly?",
+    "answer": "Acknowledge the bug during the presentation and explain the steps being taken to resolve it, focusing on the app’s other functionalities.",
+    "responseTime": 16
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "question": "During your internship at PwC, you discovered a significant data anomaly that impacted the accuracy of your forecasting model. How would you approach this situation?",
+    "answer": "Independently investigate the anomaly, attempting to identify the root cause and implement a solution before escalating the issue.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "ParmarthNGO - City Lead",
+    "question": "Reflecting on your experience leading ParmarthNGO during the COVID-19 crisis, what was your most effective strategy for coordinating a large team under pressure and ensuring the efficient delivery of essential supplies?",
+    "answer": "Implementing a strict hierarchical structure with centralized decision-making to streamline operations and minimize delays.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "While developing Resumagic, you received feedback from users expressing concerns about data privacy. How would you address these concerns and maintain user trust?",
+    "answer": "Implement additional security measures, such as end-to-end encryption and data anonymization, to further protect user data and enhance privacy.",
+    "responseTime": 3
+  },
+  {
+    "basedOn": "EventFinder",
+    "question": "During the development of EventFinder, you encountered unexpected difficulties integrating the Ticketmaster Discovery API. How would you approach troubleshooting this issue and ensuring timely project completion?",
+    "answer": "Explore alternative event data providers and consider switching to a different API if the integration issues persist.",
+    "responseTime": 4
+  }
+]

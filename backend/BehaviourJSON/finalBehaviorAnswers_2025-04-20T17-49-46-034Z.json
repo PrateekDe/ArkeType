@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "Imagine you are working on the WheelEasy map again and discover a critical bug in the zoom functionality right before a major release.  How would you approach this situation?",
+    "answer": "Release the map as planned and address the bug in a hotfix shortly after.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "During your time at PwC, you had to explain the complexities of the ensemble forecasting system to a non-technical audience. How did you tailor your communication to ensure they understood the key benefits?",
+    "answer": "Presented only the high-level overview, avoiding any technical jargon or details.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "While developing Resumagic, you encountered an unexpected issue with the Gemini API causing slowdowns.  How did you diagnose and address this problem?",
+    "answer": "Consulted the Gemini API documentation and online forums to identify the cause of the slowdown and implement a solution.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "ParmarthNGO",
+    "question": "Reflecting on your experience leading ParmarthNGO during the COVID-19 crisis, what was your biggest challenge in coordinating a large team under pressure, and how did you overcome it?",
+    "answer": "Ensuring the safety and well-being of all team members.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "ThriveSpace",
+    "question": "During the development of ThriveSpace, how did you prioritize user data privacy and security throughout the design and implementation process?",
+    "answer": "Focused primarily on functionality and user experience, addressing security concerns later in the development cycle.",
+    "responseTime": 2
+  }
+]

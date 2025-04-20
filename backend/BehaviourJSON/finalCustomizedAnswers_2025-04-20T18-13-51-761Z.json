@@ -1,0 +1,27 @@
+[
+  {
+    "question": "During your time at WheelEasy Foundation, you worked on improving the accessibility map.  Imagine a user reports a critical bug that prevents screen readers from accessing key information. How would you prioritize and address this issue?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "Acknowledge the bug report, investigate its severity and impact, and then schedule it into the existing development workflow."
+  },
+  {
+    "question": "In your role at MindScribe, you mention prioritizing user privacy and data security.  If a potential investor suggested sacrificing some security measures to speed up development and reduce costs, how would you respond?",
+    "basedOn": "MindScribe",
+    "selectedAnswer": "Explain the importance of data security and the potential long-term costs of security breaches, proposing alternative cost-saving measures."
+  },
+  {
+    "question": "Reflecting on your experience at PwC enhancing the LightGBM algorithm, you encountered unexpected results during model training.  How would you systematically investigate the root cause of this discrepancy?",
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "selectedAnswer": "Consult with senior data scientists and seek their expertise on the issue."
+  },
+  {
+    "question": "While leading the team for the Hacks for Humanity project, you were tasked with implementing a new feature but faced a significant disagreement about the best approach within the team. How did you resolve this conflict?",
+    "basedOn": "Hacks for Humanity",
+    "selectedAnswer": "Facilitated a discussion to understand each team member's perspective and reach a consensus."
+  },
+  {
+    "question": "During the development of Resumagic, you had to balance the desire for new features with the need for a stable and reliable user experience. How did you prioritize and manage these competing demands?",
+    "basedOn": "Resumagic",
+    "selectedAnswer": "Prioritized stability and reliability, adding new features only after thoroughly testing and ensuring the core functionality worked flawlessly."
+  }
+]

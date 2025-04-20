@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "Software Development Engineer Intern - Amazon",
+    "question": "Imagine you're onboarding a new team member to a complex project involving AWS services like Lambda, DynamoDB, and S3.  The documentation you previously created is slightly outdated. How do you approach this situation?",
+    "answer": "Quickly update the documentation before the new member arrives, even if it means staying late.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Junior Researcher - Somaiya Vidyavihar, IN & Children’s Investment Fund Foundation (CIFF), U.K.",
+    "question": "During your research on online child exploitation, you discovered a new pattern of abusive behavior. Your team is divided on how to proceed. Some want to publish the findings immediately, while others believe more research is necessary. How do you handle this disagreement?",
+    "answer": "Side with the team members who want to publish immediately, as early exposure is crucial.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Automating LLM-Assisted Tuning for LSM-KVS",
+    "question": "You are presenting your 'Automating LLM-Assisted Tuning for LSM-KVS' project to a non-technical audience.  How do you explain the core concept and its value?",
+    "answer": "Explain the project using analogies and relatable examples, avoiding jargon.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations",
+    "question": "While working on 'Leveraging Programmable Network Switch for pre-emptive LSM-KVS Operations', you encountered an unexpected performance bottleneck.  How do you approach debugging this issue?",
+    "answer": "Systematically test different components of the system to isolate the root cause.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Hackathon by SVB & ASU",
+    "question": "During the 'Hackathon by SVB & ASU', your team faced a critical bug just hours before the deadline. How did you and your team react under pressure?",
+    "answer": "Decided to abandon the feature entirely and focus on the remaining functional parts.",
+    "responseTime": 1
+  }
+]

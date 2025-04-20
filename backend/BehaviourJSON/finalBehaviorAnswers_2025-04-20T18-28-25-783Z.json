@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "During your time at WheelEasy Foundation, you worked on improving the accessibility map. Imagine a user reports a critical bug that prevents screen readers from accessing key information. How would you prioritize and address this issue?",
+    "answer": "Assess the impact of the bug, prioritize it alongside existing tasks, and allocate time for a fix.",
+    "responseTime": 8
+  },
+  {
+    "basedOn": "MindScribe",
+    "question": "While developing MindScribe, you focused on user privacy and data security. Let's say a user expresses concerns about the security of their data. How would you reassure them and demonstrate your commitment to data protection?",
+    "answer": "Offer a refund and assure them that their data will be deleted immediately.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "Reflecting on your PwC internship, imagine your optimized LightGBM model unexpectedly performs poorly on a new dataset. How would you approach diagnosing and resolving this issue?",
+    "answer": "Consult with senior data scientists for their expert opinion and guidance.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "In your role as Founder and Full Stack Developer at OpuLnt Technology, you researched different technologies.  If you discovered a promising new library that could significantly improve the performance of Findr, but requires a substantial rewrite of existing code, how would you proceed?",
+    "answer": "Carefully evaluate the pros and cons of adopting the new library, considering factors like development time, stability, and team expertise.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "ThriveSpace",
+    "question": "Thinking back to your work on ThriveSpace, imagine a security vulnerability is discovered in the user authentication system after the app has been launched. How would you manage this situation and communicate with your users?",
+    "answer": "Immediately take the app offline, fix the vulnerability, and then inform users about the issue and the resolution.",
+    "responseTime": 2
+  }
+]

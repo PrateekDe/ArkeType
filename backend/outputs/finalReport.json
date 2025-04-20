@@ -3,7 +3,7 @@
     "Experience": [
       {
         "Company": "WheelEasy Foundation",
-        "Role": "Frontend and Backend developer Intern",
+        "Role": "Frontend and Backend Developer Intern",
         "Location": "Sydney, Australia (Online)",
         "Dates": "Dec 2024 – present",
         "Responsibilities": [
@@ -47,7 +47,7 @@
       {
         "Company": "AdpT LLC",
         "Role": "Front End Developer",
-        "Location": "Tempe, Az",
+        "Location": "Tempe, AZ",
         "Dates": "Dec 2023 – Feb 2024",
         "Responsibilities": [
           "Planned and designed an intuitive interface using vanilla JavaScript",
@@ -102,7 +102,7 @@
         "Details": [
           "Developed an iOS app that allows users to search for events",
           "Integrated with Ticketmaster Discovery API to fetch event data",
-          "Utilized CoreLocation to display event locations"
+          "Utilized CoreLocation to display event locations on the map view"
         ]
       },
       {
@@ -130,55 +130,114 @@
   "customizedQuestions": {
     "questions": [
       {
-        "question": "Imagine you're working on the WheelEasy map again and a user reports that the zoom functionality is causing the map tiles to load slowly. How would you approach diagnosing the issue?",
+        "question": "During your internship at WheelEasy Foundation, you improved the functionality of an interactive accessibility map. Imagine a user reports a critical bug affecting the zoom functionality on specific mobile devices. How would you approach prioritizing and addressing this issue?",
         "basedOn": "WheelEasy Foundation",
         "options": [
-          "Immediately dive into the codebase and start tweaking zoom levels and tile loading parameters.",
-          "First, try to reproduce the issue myself, then systematically check network requests, tile sizes, and caching mechanisms.",
-          "Ask the user for more details about their device, browser, and internet connection, then consult online forums for similar problems.",
-          "Escalate the issue to a senior developer or team lead and wait for their guidance on how to proceed."
+          "Immediately fix the bug, pushing a hotfix directly to production to minimize user disruption.",
+          "Gather more information from the user, including device details and steps to reproduce the error, before prioritizing the fix.",
+          "Investigate the bug's root cause, assess its impact on other functionalities, and then schedule a fix based on its severity and overall project priorities.",
+          "Delegate the bug fix to another team member who specializes in mobile development."
         ]
       },
       {
-        "question": "During your time at MindScribe, you focused on user privacy and data security.  Let's say a new encryption library becomes available that promises significant performance improvements, but requires a substantial rewrite of your existing code. How do you approach evaluating whether it's worth implementing?",
-        "basedOn": "MindScribe",
-        "options": [
-          "Implement the new library immediately because performance improvements are always beneficial.",
-          "Thoroughly test the new library in a controlled environment, benchmarking its performance against the current solution and assessing potential security implications.",
-          "Stick with the existing solution as rewriting code introduces risk and might not be worth the effort.",
-          "Consult online forums and communities to gather opinions on the new library's effectiveness and suitability."
-        ]
-      },
-      {
-        "question": "While at PwC, you worked on an ensemble forecasting system. Imagine one model consistently underperforms compared to others in the ensemble. What steps would you take to address this?",
-        "basedOn": "PricewaterhouseCoopers (PwC)",
-        "options": [
-          "Remove the underperforming model from the ensemble to improve overall accuracy.",
-          "Increase the weight of the other models in the ensemble to compensate for the underperforming one.",
-          "Investigate the reasons for the underperformance, such as data quality, hyperparameter tuning, or model architecture, and try to improve its individual performance.",
-          "Consult research papers and online resources for alternative models that might be more suitable for the task."
-        ]
-      },
-      {
-        "question": "Reflecting on your work on the Findr by OpuLnt app, imagine a team member suggests a new feature that seems beneficial, but could significantly increase the app's development time. How do you approach this situation?",
-        "basedOn": "Findr by OpuLnt",
-        "options": [
-          "Implement the feature immediately, as new features are always valuable.",
-          "Dismiss the idea as it would delay the project too much.",
-          "Evaluate the potential benefits of the new feature against the increased development time and discuss the trade-offs with the team.",
-          "Suggest a simplified version of the feature that delivers the core value with less development effort."
-        ]
-      },
-      {
-        "question": "During your time at ParmarthNGO, you coordinated efforts with contractors.  Imagine a contractor consistently delivers supplies late, impacting your team's ability to help people. How do you address this issue?",
+        "question": "While leading ParmarthNGO's COVID-19 initiative, you faced the challenge of securing essential supplies amidst a crisis.  Imagine a key supplier suddenly becomes unavailable. How would you adapt your strategy to ensure the continued delivery of these critical resources?",
         "basedOn": "ParmarthNGO",
         "options": [
-          "Immediately terminate the contract with the underperforming contractor.",
-          "Communicate the impact of the delays clearly to the contractor and explore the underlying reasons for the delays, seeking collaborative solutions.",
-          "Accept the delays and adjust your team's operations to accommodate them.",
-          "Find another contractor to replace the current one, even if it takes extra time and resources."
+          "Immediately contact alternative suppliers, even if it means paying a premium, to ensure an uninterrupted supply chain.",
+          "Ration existing supplies while simultaneously exploring multiple alternative sourcing options, considering factors like cost, reliability, and delivery time.",
+          "Focus on communicating the supply chain disruption to the affected community and seek their assistance in finding alternative solutions.",
+          "Temporarily halt the distribution of supplies until a reliable supplier can be secured to avoid potential logistical complications."
+        ]
+      },
+      {
+        "question": "In the Findr by OpuLnt project, you designed secure systems for a lost-and-found app. Imagine a user reports a potential security vulnerability that could expose user data.  How would you approach this situation?",
+        "basedOn": "Findr by OpuLnt",
+        "options": [
+          "Publicly acknowledge the vulnerability and assure users that a fix is underway to maintain transparency.",
+          "Immediately take the app offline to prevent further exploitation while investigating and patching the vulnerability.",
+          "Discreetly investigate the reported vulnerability, validate its authenticity, and develop a fix before notifying users or taking the app offline.",
+          "Contact the user directly to gather more information about the vulnerability before taking any action."
+        ]
+      },
+      {
+        "question": "Reflecting on your experience developing ThriveSpace, you focused on ensuring robust data privacy for users dealing with sensitive mental health information.  If a new regulation regarding data storage were introduced, how would you approach updating the app to comply?",
+        "basedOn": "ThriveSpace",
+        "options": [
+          "Implement the minimum required changes to comply with the new regulation while minimizing impact on existing features.",
+          "Thoroughly review the new regulation, assess its impact on the app's architecture, and plan a comprehensive update strategy to ensure full compliance.",
+          "Delay implementing changes until the new regulation's impact becomes clearer and best practices emerge within the industry.",
+          "Consult with legal experts to interpret the regulation and determine the most cost-effective approach to compliance."
+        ]
+      },
+      {
+        "question": "During the Hacks for Humanity project, you led the implementation of a new login system.  Imagine the team disagreed on the best approach for password recovery. How would you navigate this conflict to reach a solution?",
+        "basedOn": "Hacks for Humanity",
+        "options": [
+          "Implement the most secure approach, regardless of the team's preferences, to prioritize user safety.",
+          "Facilitate a discussion to understand each team member's perspective and explore the pros and cons of each proposed approach before making a decision.",
+          "Defer to the team's majority opinion to avoid further conflict and ensure timely project completion.",
+          "Research industry best practices for password recovery and present them to the team to guide the decision-making process."
         ]
       }
     ]
-  }
+  },
+  "customizedAnswers": [
+    {
+      "question": "During your internship at WheelEasy Foundation, you improved the functionality of an interactive accessibility map. Imagine a user reports a critical bug affecting the zoom functionality on specific mobile devices. How would you approach prioritizing and addressing this issue?",
+      "basedOn": "WheelEasy Foundation",
+      "selectedAnswer": "Gather more information from the user, including device details and steps to reproduce the error, before prioritizing the fix."
+    },
+    {
+      "question": "While leading ParmarthNGO's COVID-19 initiative, you faced the challenge of securing essential supplies amidst a crisis.  Imagine a key supplier suddenly becomes unavailable. How would you adapt your strategy to ensure the continued delivery of these critical resources?",
+      "basedOn": "ParmarthNGO",
+      "selectedAnswer": "Ration existing supplies while simultaneously exploring multiple alternative sourcing options, considering factors like cost, reliability, and delivery time."
+    },
+    {
+      "question": "In the Findr by OpuLnt project, you designed secure systems for a lost-and-found app. Imagine a user reports a potential security vulnerability that could expose user data.  How would you approach this situation?",
+      "basedOn": "Findr by OpuLnt",
+      "selectedAnswer": "Immediately take the app offline to prevent further exploitation while investigating and patching the vulnerability."
+    },
+    {
+      "question": "Reflecting on your experience developing ThriveSpace, you focused on ensuring robust data privacy for users dealing with sensitive mental health information.  If a new regulation regarding data storage were introduced, how would you approach updating the app to comply?",
+      "basedOn": "ThriveSpace",
+      "selectedAnswer": "Thoroughly review the new regulation, assess its impact on the app's architecture, and plan a comprehensive update strategy to ensure full compliance."
+    },
+    {
+      "question": "During the Hacks for Humanity project, you led the implementation of a new login system.  Imagine the team disagreed on the best approach for password recovery. How would you navigate this conflict to reach a solution?",
+      "basedOn": "Hacks for Humanity",
+      "selectedAnswer": "Facilitate a discussion to understand each team member's perspective and explore the pros and cons of each proposed approach before making a decision."
+    }
+  ],
+  "behavioralAnswers": [
+    {
+      "basedOn": "WheelEasy Foundation",
+      "question": "During your internship at WheelEasy Foundation, you improved the functionality of an interactive accessibility map. Imagine a user reports a critical bug affecting the zoom functionality on specific mobile devices. How would you approach prioritizing and addressing this issue?",
+      "answer": "Gather more information from the user, including device details and steps to reproduce the error, before prioritizing the fix.",
+      "responseTime": 17
+    },
+    {
+      "basedOn": "ParmarthNGO",
+      "question": "While leading ParmarthNGO's COVID-19 initiative, you faced the challenge of securing essential supplies amidst a crisis.  Imagine a key supplier suddenly becomes unavailable. How would you adapt your strategy to ensure the continued delivery of these critical resources?",
+      "answer": "Focus on communicating the supply chain disruption to the affected community and seek their assistance in finding alternative solutions.",
+      "responseTime": 9
+    },
+    {
+      "basedOn": "Findr by OpuLnt",
+      "question": "In the Findr by OpuLnt project, you designed secure systems for a lost-and-found app. Imagine a user reports a potential security vulnerability that could expose user data.  How would you approach this situation?",
+      "answer": "Discreetly investigate the reported vulnerability, validate its authenticity, and develop a fix before notifying users or taking the app offline.",
+      "responseTime": 3
+    },
+    {
+      "basedOn": "ThriveSpace",
+      "question": "Reflecting on your experience developing ThriveSpace, you focused on ensuring robust data privacy for users dealing with sensitive mental health information.  If a new regulation regarding data storage were introduced, how would you approach updating the app to comply?",
+      "answer": "Thoroughly review the new regulation, assess its impact on the app's architecture, and plan a comprehensive update strategy to ensure full compliance.",
+      "responseTime": 5
+    },
+    {
+      "basedOn": "Hacks for Humanity",
+      "question": "During the Hacks for Humanity project, you led the implementation of a new login system.  Imagine the team disagreed on the best approach for password recovery. How would you navigate this conflict to reach a solution?",
+      "answer": "Defer to the team's majority opinion to avoid further conflict and ensure timely project completion.",
+      "responseTime": 2
+    }
+  ]
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "WheelEasy Foundation",
+    "question": "During your time at WheelEasy Foundation, you worked on improving the accessibility map.  Imagine a user reports a critical bug that prevents screen readers from accessing key information. How would you prioritize and address this issue?",
+    "answer": "Immediately halt all other tasks and dedicate time to fix the bug, deploying a hotfix as soon as possible.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "MindScribe",
+    "question": "In your role at MindScribe, you mention prioritizing user privacy and data security.  If a potential investor suggested sacrificing some security measures to speed up development and reduce costs, how would you respond?",
+    "answer": "Compromise by implementing some of the investor's suggestions while maintaining core security measures for sensitive user data.",
+    "responseTime": 3
+  },
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC)",
+    "question": "Reflecting on your experience at PwC enhancing the LightGBM algorithm, you encountered unexpected results during model training.  How would you systematically investigate the root cause of this discrepancy?",
+    "answer": "Consult with senior data scientists and seek their expertise on the issue.",
+    "responseTime": 3
+  },
+  {
+    "basedOn": "Hacks for Humanity",
+    "question": "While leading the team for the Hacks for Humanity project, you were tasked with implementing a new feature but faced a significant disagreement about the best approach within the team. How did you resolve this conflict?",
+    "answer": "Facilitated a discussion to understand each team member's perspective and reach a consensus.",
+    "responseTime": 4
+  },
+  {
+    "basedOn": "Resumagic",
+    "question": "During the development of Resumagic, you had to balance the desire for new features with the need for a stable and reliable user experience. How did you prioritize and manage these competing demands?",
+    "answer": "Prioritized stability and reliability, adding new features only after thoroughly testing and ensuring the core functionality worked flawlessly.",
+    "responseTime": 2
+  }
+]

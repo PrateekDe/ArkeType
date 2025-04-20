@@ -1,0 +1,27 @@
+[
+  {
+    "question": "During your internship at WheelEasy Foundation, you improved the functionality of an interactive accessibility map. Imagine a user reports a critical bug affecting the zoom functionality on specific mobile devices. How would you approach prioritizing and addressing this issue?",
+    "basedOn": "WheelEasy Foundation",
+    "selectedAnswer": "Gather more information from the user, including device details and steps to reproduce the error, before prioritizing the fix."
+  },
+  {
+    "question": "While leading ParmarthNGO's COVID-19 initiative, you faced the challenge of securing essential supplies amidst a crisis.  Imagine a key supplier suddenly becomes unavailable. How would you adapt your strategy to ensure the continued delivery of these critical resources?",
+    "basedOn": "ParmarthNGO",
+    "selectedAnswer": "Ration existing supplies while simultaneously exploring multiple alternative sourcing options, considering factors like cost, reliability, and delivery time."
+  },
+  {
+    "question": "In the Findr by OpuLnt project, you designed secure systems for a lost-and-found app. Imagine a user reports a potential security vulnerability that could expose user data.  How would you approach this situation?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Immediately take the app offline to prevent further exploitation while investigating and patching the vulnerability."
+  },
+  {
+    "question": "Reflecting on your experience developing ThriveSpace, you focused on ensuring robust data privacy for users dealing with sensitive mental health information.  If a new regulation regarding data storage were introduced, how would you approach updating the app to comply?",
+    "basedOn": "ThriveSpace",
+    "selectedAnswer": "Thoroughly review the new regulation, assess its impact on the app's architecture, and plan a comprehensive update strategy to ensure full compliance."
+  },
+  {
+    "question": "During the Hacks for Humanity project, you led the implementation of a new login system.  Imagine the team disagreed on the best approach for password recovery. How would you navigate this conflict to reach a solution?",
+    "basedOn": "Hacks for Humanity",
+    "selectedAnswer": "Facilitate a discussion to understand each team member's perspective and explore the pros and cons of each proposed approach before making a decision."
+  }
+]

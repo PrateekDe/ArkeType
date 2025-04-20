@@ -172,6 +172,7 @@ if (document.getElementById('resultContainer2')) {
 
 
 // Final Result Page (result.html)
+// Final Result Page (result.html)
 if (document.getElementById('finalResultContainer')) {
   const loader = document.getElementById('loader');
   const finalContainer = document.getElementById('finalResultContainer');
@@ -184,8 +185,12 @@ if (document.getElementById('finalResultContainer')) {
         return;
       }
 
-      // ✅ After initial /report load, call /final-report (executive summary)
-      generateFinalSummaryFromAI();
+      // ✅ Different behavior for candidate vs recruiter
+      if (userType === "recruiter") {
+        generateFinalSummaryFromAI();
+      } else if (userType === "candidate") {
+        showThankYouPage();   // ✨ New function for candidate
+      }
     })
     .catch(err => {
       console.error('Error loading report:', err);
@@ -193,44 +198,7 @@ if (document.getElementById('finalResultContainer')) {
     });
 }
 
-// ✅ Proper function to fetch AI Analyzed Summary
-function generateFinalSummaryFromAI() {
-  const summaryLoader = document.getElementById('summaryLoader');
-
-  fetch('/final-report')
-    .then(res => res.json())
-    .then(analysis => {
-      if (!analysis) {
-        console.error('No AI analysis found.');
-        return;
-      }
-
-      // Fill the Final Report Data
-      document.getElementById('candidateName').textContent = analysis.name || 'Candidate Name';
-      document.getElementById('experienceValue').textContent = analysis.experience || 'N/A';
-      document.getElementById('projectsValue').textContent = analysis.projects || 'N/A';
-      document.getElementById('loyaltyValue').textContent = `${analysis.loyaltyPercent}%`;
-      document.getElementById('growthValue').textContent = `${analysis.companyGrowthPercent}%`;
-      document.getElementById('emotionalIQValue').textContent = `${analysis.emotionalIQPercent}%`;
-      document.getElementById('resultsValue').textContent = `${analysis.resultsFocusPercent}%`;
-      document.getElementById('avgTime').textContent = `${analysis.averageResponseTime} Seconds`;
-      document.getElementById('analysisValue').textContent = analysis.overallAnalysis || '-';
-      document.getElementById('recruiterLooking').textContent = analysis.recruiterLooking || 'N/A';
-      document.getElementById('desirabilityScore').textContent = analysis.desirabilityScore || '--';
-
-      // Hide Loader and Show Content
-      loader.style.display = 'none';
-      document.querySelector('.z-10').style.display = 'flex';
-    })
-    .catch(err => {
-      console.error('Error loading final AI report:', err);
-      loader.innerHTML = '<p>Failed to load analysis. Try again later.</p>';
-    });
-}
-
-
-
-// Function to fetch AI Analyzed Executive Summary
+// ✅ Recruiter side (already given)
 function generateFinalSummaryFromAI() {
   const summaryLoader = document.getElementById('loader');
 
@@ -240,10 +208,9 @@ function generateFinalSummaryFromAI() {
       console.log("hiiii");
       if (summaryLoader) summaryLoader.remove();
 
-      // ✅ Update individual IDs with analysis data
-      document.getElementById('candidateName').textContent = analysis.name || 'Candidate Name';
-      document.getElementById('experienceValue').textContent = analysis.experience || 'N/A';
-      document.getElementById('projectsValue').textContent = analysis.projects || 'N/A';
+      document.getElementById('candidateName').textContent = analysis.name || 'Prateek De';
+      document.getElementById('experienceValue').textContent = analysis.experience || '2 years 3 months';
+      document.getElementById('projectsValue').textContent = analysis.projects || '6 projects';
       document.getElementById('loyaltyValue').textContent = `${analysis.loyaltyPercent}%`;
       document.getElementById('growthValue').textContent = `${analysis.companyGrowthPercent}%`;
       document.getElementById('emotionalIQValue').textContent = `${analysis.emotionalIQPercent}%`;
@@ -253,7 +220,6 @@ function generateFinalSummaryFromAI() {
       document.getElementById('recruiterLooking').textContent = analysis.recruiterLooking || 'Emotional';
       document.getElementById('desirabilityScore').textContent = analysis.desirabilityScore || '--';
 
-      // ✅ Make report visible
       document.querySelector('.z-10').style.display = 'flex';
     })
     .catch(err => {
@@ -262,3 +228,25 @@ function generateFinalSummaryFromAI() {
     });
 }
 
+// ✅ ✨ Candidate side: Show Thank You page
+function showThankYouPage() {
+  const loader = document.getElementById('loader');
+  if (loader) loader.remove();
+
+  const container = document.querySelector('.z-10');
+  container.innerHTML = `
+    <div class="flex flex-col items-center justify-center w-full h-screen text-center p-10">
+      <h1 class="text-5xl font-bold mb-6">🎉 Thank You!</h1>
+      <p class="text-2xl mb-10">Your responses have been recorded successfully.</p>
+      <button onclick="exitToLogin()" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white text-lg rounded-full transition-all duration-300">
+        Exit ➔ Login Page
+      </button>
+    </div>
+  `;
+}
+
+// ✅ Button click function
+function exitToLogin() {
+  sessionStorage.clear();    // 🧹 clear userType
+  window.location.href = 'login.html';
+}

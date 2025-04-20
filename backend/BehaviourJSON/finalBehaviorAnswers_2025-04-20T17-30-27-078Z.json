@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "question": "During your internship at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant bug in your implementation that negatively impacted the model's performance just hours before a critical presentation. How would you handle this situation?",
+    "answer": "Immediately inform the team and stakeholders about the bug, present the original flawed results, and offer to rectify the issue later.",
+    "responseTime": 2
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "While working on Findr by OpuLnt, how did you approach collaborating with your team to design the secure systems for item listings and messaging?",
+    "answer": "Followed established security protocols and best practices without much discussion within the team.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "WheelEasy Foundation - Frontend and Backend developer Intern",
+    "question": "In your role at WheelEasy Foundation, you improved the map's zoom and navigation.  A user reports that these changes have made the map less accessible for users with certain disabilities. How do you respond?",
+    "answer": "Explain the rationale behind the changes and suggest workarounds the user could employ.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "ParmarthNGO - City Lead",
+    "question": "Reflecting on your experience leading a team of 200 volunteers at ParmarthNGO during a crisis, what was the most challenging aspect of coordinating efforts with contractors for essential supplies?",
+    "answer": "Balancing the urgency of the situation with the need to adhere to proper procurement procedures and regulations.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Resumagic - AI-Powered Web Tool",
+    "question": "During the development of Resumagic, you had to integrate AWS Lambda for secure API interactions.  Imagine the Lambda function started experiencing unexpected latency issues, affecting the user experience. How would you approach debugging and resolving this?",
+    "answer": "Implement additional logging and monitoring to identify the root cause of the latency and then apply targeted fixes.",
+    "responseTime": 1
+  }
+]

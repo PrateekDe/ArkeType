@@ -118,7 +118,7 @@ fs.copyFileSync(filePath, savedPath); // ✅ Save it permanently
 console.log('✅ Resume uploaded and saved.');
 
   // ✅ Call your bot.py immediately after upload!
-  const pythonProcess = spawn('python', ['backend/rag_resume_bot.py', savedPath]);
+  const pythonProcess = spawn('python3', ['backend/rag_resume_bot.py', savedPath]);
 
   pythonProcess.stdout.on('data', (data) => {
     console.log(`[Python Output]: ${data.toString()}`);
@@ -180,4 +180,38 @@ app.get('/report', (req, res) => {
 
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
+});
+
+
+
+// 👇 Add this after all your existing routes
+app.post('/ask-rag', (req, res) => {
+  let body = '';
+
+  req.on('data', chunk => {
+    body += chunk;
+  });
+
+  req.on('end', () => {
+    const { question } = JSON.parse(body);
+
+    console.log(`🧠 Incoming RAG question: ${question}`);
+
+    // 👇 Call Python bot.py with the question
+    const pythonProcess = spawn('python3', ['backend/rag_resume_bot.py', 'backend/outputs/uploadedResume.pdf', question]);
+
+    let output = '';
+    pythonProcess.stdout.on('data', (data) => {
+      output += data.toString();
+    });
+
+    pythonProcess.stderr.on('data', (data) => {
+      console.error(`[Python Error]: ${data.toString()}`);
+    });
+
+    pythonProcess.on('close', (code) => {
+      console.log(`✅ Python process closed with code ${code}`);
+      res.json({ answer: output.trim() });
+    });
+  });
 });

@@ -1,0 +1,32 @@
+[
+  {
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "question": "During your internship at PwC, you enhanced the LightGBM algorithm. Imagine you discovered a significant flaw in your implementation after deploying it. How would you approach resolving this issue?",
+    "answer": "Inform the team and stakeholders about the flaw, then work collaboratively to hotfix the issue while minimizing disruption.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "ParmarthNGO - City Lead",
+    "question": "While leading ParmarthNGO during the COVID-19 crisis, how did you handle conflicting priorities or urgent requests from your team and the community?",
+    "answer": "Delegated decision-making to team members based on their areas of expertise and availability.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Findr by OpuLnt",
+    "question": "Reflecting on your experience building Findr by OpuLnt, what strategies did you employ to ensure effective collaboration and communication within your team of four?",
+    "answer": "Implemented daily stand-up meetings and utilized project management tools to track progress and address any roadblocks.",
+    "responseTime": 1
+  },
+  {
+    "basedOn": "Resumagic - AI-Powered Web Tool",
+    "question": "While developing Resumagic, you integrated AWS Lambda for secure Gemini API interactions. Imagine the Lambda function started experiencing unexpected latency issues. How would you approach diagnosing and resolving the problem?",
+    "answer": "Immediately increase the resources allocated to the Lambda function to address the latency issue.",
+    "responseTime": 3
+  },
+  {
+    "basedOn": "WheelEasy Foundation - Frontend and Backend developer Intern",
+    "question": "At WheelEasy Foundation, you improved the zoom-in and sidebar navigation. Imagine a user reports a confusing interaction between these features. How would you gather information to understand and fix the issue?",
+    "answer": "Reach out to the user directly to gather more context about their specific experience and the steps they took.",
+    "responseTime": 2
+  }
+]
