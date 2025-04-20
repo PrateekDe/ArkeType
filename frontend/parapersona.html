@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parapersona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #3c0f69, #6e2f99);
+      color: white;
+      text-align: center;
+    }
+    .screen {
+      display: none;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #screen0 { display: flex; }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #d6b5ff;
+      color: #3c0f69;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #caa2f5;
+    }
+    input[type="file"], textarea {
+      margin: 20px 0;
+      padding: 10px;
+      border-radius: 10px;
+      width: 300px;
+      max-width: 90%;
+    }
+    .progress {
+      width: 80%;
+      height: 10px;
+      background: #999;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+    .bar {
+      height: 100%;
+      background: #d6b5ff;
+      width: 5%;
+      border-radius: 5px;
+      transition: width 0.3s ease-in-out;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 500px;
+    }
+    .score {
+      font-size: 32px;
+      font-weight: bold;
+      color: lime;
+    }
+    .low-score {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Landing Page -->
+  <div class="screen" id="screen0">
+    <div>
+      <h1>WELCOME TO PARAPERSONA</h1>
+      <button onclick="goToScreen(1)">Sign up</button>
+      <button onclick="goToScreen(1)">Sign in</button>
+    </div>
+  </div>
+
+  <!-- Frame 1 -->
+  <div class="screen" id="screen1">
+    <h2>Welcome to Parapersona</h2>
+    <p>Let’s get started</p>
+    <input type="file" id="resumeInput">
+    <div>
+      <button onclick="goToScreen(2)">Behavioral Assessment</button>
+      <button onclick="goToScreen(2)">Personalized Questions</button>
+      <button onclick="goToScreen(2)">Desirability Score</button>
+    </div>
+    <p>5%</p>
+  </div>
+
+  <!-- Frame 2 -->
+  <div class="screen" id="screen2">
+    <h2>EXTRACTING INFO</h2>
+    <p>Behavioral Assessment</p>
+    <div class="progress"><div class="bar" style="width: 5%;"></div></div>
+    <button onclick="goToScreen(3)">Next</button>
+  </div>
+
+  <!-- Frame 3 -->
+  <div class="screen" id="screen3">
+    <h2>BEHAVIORAL ASSESSMENT</h2>
+    <p><strong>Question 1 of 5</strong><br>How do you typically approach conflict within a team?</p>
+    <div>
+      <p>A. Try to understand all perspectives and facilitate calm discussion</p>
+      <p>B. Work directly and quickly to resolve the issue</p>
+      <p>C. Avoid conflict unless necessary</p>
+    </div>
+    <button onclick="goToScreen(4)">Next</button>
+  </div>
+
+  <!-- Frame 4 -->
+  <div class="screen" id="screen4">
+    <h2>PERSONAL ASSESSMENT</h2>
+    <p><strong>Question 1 of 5</strong><br>Describe your experience with this project in a few sentences.</p>
+    <textarea rows="5" placeholder="Write here..."></textarea><br>
+    <button onclick="goToScreen(5)">Submit</button>
+  </div>
+
+  <!-- Frame 5 -->
+  <div class="screen" id="screen5">
+    <h2>YOUR FINAL REPORT</h2>
+    <div class="card">
+      <p><strong>JAMES MILLER</strong></p>
+      <p>Experience: 5 years<br>Projects: 6</p>
+      <p>Loyalty: 88% | Emotional IQ: 75%<br>Growth: 90% | Decision Speed: 43s</p>
+      <p>Strengths: Loyal, Quick learner, Analytical</p>
+      <p class="score">DESIRABILITY SCORE: 95</p>
+    </div>
+    <button onclick="goToScreen(6)">View Another</button>
+  </div>
+
+  <!-- Frame 6 -->
+  <div class="screen" id="screen6">
+    <h2>YOUR FINAL REPORT</h2>
+    <div class="card">
+      <p><strong>TROY SMITH</strong></p>
+      <p>Experience: 2 years<br>Projects: 1</p>
+      <p>Loyalty: 65% | Emotional IQ: 58%<br>Growth: 33% | Decision Speed: 82s</p>
+      <p>Areas to Improve: Teamwork, Growth</p>
+      <p class="score low-score">DESIRABILITY SCORE: 35</p>
+    </div>
+    <button onclick="goToScreen(0)">Restart</button>
+  </div>
+
+  <script>
+    function goToScreen(index) {
+      document.querySelectorAll('.screen').forEach((div, i) => {
+        div.style.display = i === index ? 'flex' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
