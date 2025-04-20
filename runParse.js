@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import { extractResumeExperience } from './gemini/test.js';
+import { extractResumeExperience, generateCustomQuestions } from './gemini/test.js';
 import pkg from 'pdfjs-dist';
 const { getDocument } = pkg;
 
-const filePath = '/Users/prateekde/Desktop/ArkeType/Prateek_De_Resume_USA.pdf'; // ✅ new path
+const filePath = './Prateek_De_Resume_USA.pdf'; // ✅ new path
 console.log('✅ Using file:', filePath);
 
 (async () => {
@@ -29,6 +29,18 @@ console.log('✅ Using file:', filePath);
 
     console.log('\n✅ Gemini Parsed Output:\n');
     console.log(parsedOutput);
+
+    // 🆕 Generate customized behavioral questions
+const customQuestions = await generateCustomQuestions(parsedOutput);
+
+console.log('\n🎯 Customized Behavioral Questions:\n');
+console.log(customQuestions);
+
+// Optional: Save to a JSON file
+fs.writeFileSync('./customized_questions.json', customQuestions);
+console.log('\n💾 Customized Questions saved to customized_questions.json');
+
+
   } catch (err) {
     console.error('❌ Error:', err.message);
   }
