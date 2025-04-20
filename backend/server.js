@@ -26,10 +26,16 @@ app.post('/save-customized-json', (req, res) => {
   req.on('end', () => {
     try {
       const parsed = JSON.parse(body);
+
+      const reportPath = 'backend/outputs/finalReport.json';
+      const existing = JSON.parse(fs.readFileSync(reportPath));
+      existing.customizedAnswers = parsed;  // <-- ✅ Save customized answers into report
+      fs.writeFileSync(reportPath, JSON.stringify(existing, null, 2));
+
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const fileName = `backend/BehaviourJSON/finalCustomizedAnswers_${timestamp}.json`;
-
       fs.writeFileSync(fileName, JSON.stringify(parsed, null, 2)); 
+
       res.json({ success: true, file: fileName });
     } catch (err) {
       console.error('❌ Customized JSON Save Error:', err.message);

@@ -211,20 +211,19 @@ if (document.getElementById('finalResultContainer')) {
         });
       }
 
-      // 🛠 Customized Questions Answers
+      // 🛠 Customized Questions Answers (directly from report)
       const customizedDiv = document.getElementById('customizedList');
-      if (data.customizedQuestions) {
-        fetchLatestCustomized()
-          .then(customizedAnswers => {
-            customizedAnswers.forEach(ans => {
-              customizedDiv.innerHTML += `
-                <div class="card">
-                  <p><strong>Question:</strong> ${ans.question}</p>
-                  <p><strong>Selected Answer:</strong> ${ans.selectedAnswer}</p>
-                </div>
-              `;
-            });
-          });
+      if (data.customizedAnswers) {
+        data.customizedAnswers.forEach(ans => {
+          customizedDiv.innerHTML += `
+            <div class="card">
+              <p><strong>Question:</strong> ${ans.question}</p>
+              <p><strong>Selected Answer:</strong> ${ans.selectedAnswer}</p>
+            </div>
+          `;
+        });
+      } else {
+        customizedDiv.innerHTML = '<p>No customized answers found.</p>';
       }
 
       // 💬 Behavioral Answers
