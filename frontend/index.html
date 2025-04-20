@@ -2,23 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Upload Resume</title>
+  <title>Welcome to Parapersona</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Let's Get Real About Talent</h1>
-    <p>Upload your resume. We'll do the magic.</p>
-
-    <div class="upload-box" onclick="document.getElementById('resumeInput').click();">
-      <input type="file" id="resumeInput" accept=".pdf" hidden>
-      <div class="upload-text">⬆️ Drag & Drop or Click to Upload (PDF)</div>
+  <div class="container upload-page">
+    <div class="left">
+      <h1>Welcome to <span class="highlight">Parapersona</span></h1>
+      <p>Let's get started</p>
+      <div class="steps">
+        <button class="step-btn">Behavioral Assessment</button>
+        <button class="step-btn">Personalized Questions</button>
+        <button class="step-btn">Desirability Score</button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 5%;"></div>
+      </div>
+      <p class="progress-text">5%</p>
     </div>
 
-    <!-- 🆕 Uploaded filename -->
-    <p id="uploadStatus" class="upload-status"></p>
-
-    <button id="uploadBtn" class="primary-button" disabled>Upload ➔</button>
+    <div class="right upload-box" onclick="document.getElementById('resumeInput').click();">
+      <input type="file" id="resumeInput" accept=".pdf" hidden>
+      <div class="upload-icon">📄</div>
+      <h2>Upload your resume</h2>
+      <p>Drag and drop file here, or</p>
+      <button id="uploadBtn" class="primary-button" disabled>Begin Upload</button>
+      <p id="uploadStatus" class="upload-status"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>

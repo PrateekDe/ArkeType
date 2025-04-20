@@ -278,7 +278,7 @@ function generateFinalSummaryFromAI() {
             <h3>Final Verdict</h3>
             <p>${analysis.overallAnalysis}</p>
 
-            <h2 style="color: red;">Desirability Score: ${analysis.desirabilityScore}%</h2>
+            <h2 style="color: black;">Desirability Score: ${analysis.desirabilityScore}%</h2>
           </div>
         </section>
       `;

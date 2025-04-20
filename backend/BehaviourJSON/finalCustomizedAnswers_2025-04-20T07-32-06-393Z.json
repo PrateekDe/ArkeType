@@ -1,0 +1,17 @@
+[
+  {
+    "question": "During your internship at PwC, you improved the LightGBM algorithm's ability to capture seasonal trends. Imagine you're facing a similar challenge in a new project, but the data exhibits highly irregular and unpredictable seasonal patterns.  How would you approach this situation?",
+    "basedOn": "PricewaterhouseCoopers (PwC) - Data Science Intern",
+    "selectedAnswer": "Invest time in thorough exploratory data analysis to identify underlying patterns and potential external factors influencing the irregular seasonality."
+  },
+  {
+    "question": "In the development of Findr by OpuLnt, you aimed to create a user-friendly platform with minimal registration requirements. Reflecting on this, how do you balance the need for user convenience with the importance of data security, especially in a lost-and-found app dealing with potentially sensitive item information?",
+    "basedOn": "Findr by OpuLnt",
+    "selectedAnswer": "Prioritize minimal registration, but offer optional enhanced security features for users who want to protect specific item details or their contact information."
+  },
+  {
+    "question": "In your role at ParmarthNGO, you led a large team during a crisis. Imagine you are leading a team on a critical project, and a key team member unexpectedly becomes unavailable.  How would you handle the situation to minimize disruption and ensure project success?",
+    "basedOn": "ParmarthNGO - City Lead",
+    "selectedAnswer": "Pause the project briefly to reassess the critical path and identify potential dependencies affected by the team member's absence, then adjust the plan accordingly."
+  }
+]

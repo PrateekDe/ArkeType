@@ -1,152 +1,121 @@
-/* Reset and base */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Inter', 'Helvetica Neue', sans-serif;
-    background-color: #f9f9f9;
-    color: #111;
-  }
-  
-  .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  /* Upload Box */
-  .upload-box {
-    width: 320px;
-    height: 220px;
-    border: 2px dashed #ccc;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
-    background-color: #fff;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  
-  .upload-box:hover {
-    border-color: #007aff;
-    background-color: #f0f8ff;
-  }
-  
-  .upload-text {
-    font-size: 1rem;
-    color: #777;
-    line-height: 1.5;
-  }
-  
-  /* Button */
-  .primary-button {
-    background-color: #007aff;
-    color: white;
-    border: none;
-    padding: 14px 30px;
-    font-size: 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .primary-button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-  }
-  
-  .primary-button:hover:enabled {
-    background-color: #005bb5;
-  }
-  
-  /* Spinner (loading.html) */
-  .spinner {
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid #007aff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-    margin-top: 40px;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  /* Result cards */
-  #experience, #questions {
-    margin-top: 30px;
-    width: 90%;
-    max-width: 600px;
-  }
-  
-  .card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    margin-bottom: 20px;
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .card h2 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .upload-status {
-    font-size: 1rem;
-    color: #007aff;
-    margin-top: 10px;
-    font-style: italic;
-  }
-  
+/* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .loader-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
-    font-size: 18px;
-    color: #555;
-  }
-  
-  .spinner {
-    width: 60px;
-    height: 60px;
-    border: 6px solid #ccc;
-    border-top: 6px solid #0070f3;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Upload Page Layout */
+.upload-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left, .right {
+  flex: 1;
+}
+
+.right {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+/* Steps Buttons */
+.step-btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: default;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 10px;
+  background: #ffd700;
+  border-radius: 10px;
+}
+
+/* Loader Page */
+.loader-page {
+  text-align: center;
+}
+
+.magnifier-icon {
+  font-size: 80px;
+  margin: 30px 0;
+}
+
+/* Buttons */
+.primary-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  border: none;
+  background: #ffd700;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4b0082;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-button:disabled {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+}
+
+.primary-button:hover {
+  background: #ffcc00;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+/* For behavioral questions */
+label {
+  display: block;
+  margin: 10px 0;
+}
